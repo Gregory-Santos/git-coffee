@@ -3,6 +3,7 @@ import { Home } from './feats/home/home';
 
 export const routes: Routes = [
 
-    {path: 'home', component: Home}
-    
+    {path: 'home', component: Home},
+    {path: '', redirectTo: 'home', pathMatch: 'full'}
+
 ];
