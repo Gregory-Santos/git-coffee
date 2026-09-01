@@ -4,9 +4,14 @@
       
     </div>
     
-    <form submit></form>
+    <form (submit)="pesquisarProduto($event)">
+        <input type="text" placeholder="Digite o Id do usuário" [formField]="pesquisaForm">
+        <button [disabled]="pesquisaForm().invalid()">🔍</button>
+    </form>
 
     <nav>
         <a routerLink="/home" routerLinkActive="pagina-ativa">Home</a>
     </nav>
 </div>>
+
+
