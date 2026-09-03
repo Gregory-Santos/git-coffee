@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CarrinhoService } from './carrinho-service';
 
 @Component({
   imports: [],
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './carrinho.html',
 })
 export class Carrinho {
+
+  protected readonly CarrinhoService = inject(CarrinhoService)
+
 }

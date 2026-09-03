@@ -1,7 +1,10 @@
 <p>carrinho works!</p>
 
-<ul>
-    <li>
-        
-    </li>
-</ul>
+<div class="quantidade">
+
+    <button (click)="CarrinhoService.incrementar()"><i class="fa-solid fa-plus"></i></button>
+    <span>{{ CarrinhoService.contador() }}</span>
+    <button (click)="CarrinhoService.diminuir()"><i class="fa-solid fa-minus"></i></button>
+    <button (click)="CarrinhoService.zerar()"><i class="fa-solid fa-trash-can"></i></button>
+
+</div>
