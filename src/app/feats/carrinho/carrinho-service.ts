@@ -5,6 +5,19 @@ import { ItemCarrinhoInterface } from './item-carrinho-interface';
 export class CarrinhoService {
 
 
-    protected carrinho= signal<ItemCarrinhoInterface[]>([])
+    protected carrinho = signal<ItemCarrinhoInterface[]>([])
+
+    protected contador = signal<number>(0);
+
+    incrementar() {
+        this.contador.update(valor => valor + 1);
+    };
     
+    diminuir(){
+        this.contador.update(valor => valor -1);
+    }
+ 
+    zerar(){
+        this.contador.set(0);
+    }
 }
