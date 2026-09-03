@@ -37,5 +37,5 @@ export class CarrinhoService {
     }
     zerar() {
         this.contador.set(0);
-    }
+    };
 }
