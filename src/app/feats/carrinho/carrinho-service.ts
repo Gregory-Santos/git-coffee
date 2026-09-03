@@ -10,18 +10,16 @@ export class CarrinhoService {
             id: 1,
             nome: 'Café',
             descricao: 'Café com torra média, toques de caramelo',
-            preco: 20.90,
-            peso: 250,
-            estoque: 1
+            preco: 20.90
     })
 
 
 
     protected carrinho = signal<ItemCarrinhoInterface[]>([
-        {
-            produto: this.
-            quantidade: 1
-        }
+     {
+        produto: this.produtoFicticio(),
+        quantidade: 1
+     }
     ])
 
     contador = signal<number>(0);
