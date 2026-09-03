@@ -1,43 +1,28 @@
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="carrossel">
+  <div class="cartao-produto">
+    <!-- Informações do produto atual -->
+    <div class="informacoes-produto">
+      <span class="categoria">{{ produto.categoria }}</span>
+      <h2>{{ produto.nome }}</h2>
+      <span class="preco">R$ {{ produto.preco}}</span>
+      <p>{{ produto.descricao }}</p>
+      <button class="botao-adicionar" (click)="adicionar(produto)">
+        <span>Adicionar</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-            <img
-  src="https://drive.google.com/thumbnail?id=14PFafY3r5i2jWGxk2qdkobdKTzBiLiye&sz=w1000"
-  class="d-block w-100"
-  alt="Matcha Latte Gelado"
->
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-        </div>
+    
+    <div class="imagem-produto">
+      <img [src]="produto.imagem" [alt]="produto.nome">
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+
+    <button class="seta seta-esquerda" (click)="anterior()" aria-label="Produto anterior">‹</button>
+    <button class="seta seta-direita" (click)="proximo()" aria-label="Próximo produto">›</button>
+  </div>
+
+  <div class="indicadores">
+    @for (item of produtos; track $index) {
+      <button [class.ativo]="$index === indiceAtual" (click)="irPara($index)" [attr.aria-label]="'Ir para o produto ' + ($index + 1)"></button>
+    }
+  </div>
 </div>
