@@ -1,0 +1,389 @@
+/* =========================
+   PÁGINA DE LOGIN
+========================= */
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 6%;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.08)
+    ),
+    url('/img/grao-cafe.png');
+
+  background-size: cover;
+  background-position: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.login-card {
+  width: 400px;
+  min-height: 500px;
+
+  padding: 20px 70px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.20);
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.login-card h1 {
+  margin: 0 0 25px;
+
+  text-align: center;
+
+  color: #111111;
+
+  font-size: 26px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.login-card form {
+  width: 100%;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 13px;
+}
+
+.field label {
+  margin-bottom: 6px;
+
+  color: #222222;
+
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.field input {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 16px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 25px;
+
+  background-color: #f1eee9;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  background-color: #ebe6df;
+
+  box-shadow:
+    0 0 0 2px rgba(112, 90, 76, 0.25);
+}
+
+
+/* =========================
+   BOTÃO LOGIN
+========================= */
+
+.login-button {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: #705a4c;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.login-button:hover {
+  background-color: #604b3f;
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   ESQUECEU A SENHA
+========================= */
+
+.forgot-password {
+  align-self: flex-start;
+
+  margin-top: 10px;
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   OUTRAS FORMAS
+========================= */
+
+.other-login {
+  width: 100%;
+
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+.other-login > span {
+  color: #111111;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+/* =========================
+   BOTÕES SOCIAIS
+========================= */
+
+.social-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 15px;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+
+/* Google */
+
+.google {
+  background-color: #ffffff;
+
+  color: #4285f4;
+
+  font-size: 21px;
+  font-weight: bold;
+
+  box-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.18);
+}
+
+
+/* LinkedIn */
+
+.linkedin {
+  background-color: #0a66c2;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* Facebook */
+
+.facebook {
+  background-color: #1877f2;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   SEPARADOR "OU"
+========================= */
+
+.separator {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 25px 0 30px;
+}
+
+.separator span {
+  color: #111111;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   BOTÃO CADASTRO
+========================= */
+
+.register-button {
+  width: 100%;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: #705a4c;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.register-button:hover {
+  background-color: #604b3f;
+}
+
+.register-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+  .login-page {
+    justify-content: center;
+
+    padding: 30px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    min-height: auto;
+
+    padding: 30px;
+  }
+
+  .login-card h1 {
+    font-size: 23px;
+  }
+
+}

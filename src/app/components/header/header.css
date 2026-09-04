@@ -11,7 +11,7 @@
     background-color: #f5f1eb;
     border-bottom: 1px solid #b8b0a6;
 
-    font-family: Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 /* LOGO */
@@ -114,6 +114,7 @@ nav a {
 
 nav a:hover {
     color: #111;
+    font-size: 14px;
 }
 
 nav a.pagina-ativa {

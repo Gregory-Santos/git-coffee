@@ -1,1 +1,61 @@
-<p>login works!</p>
+<main class="login-page">
+
+    <section class="login-card">
+
+        <h1>Bem Vindo!</h1>
+
+        <form (ngSubmit)="loginDemo()">
+
+            <div class="field">
+                <label for="email">Email</label>
+
+                <input id="email" type="text" [(ngModel)]="email" name="email" autocomplete="off" />
+            </div>
+
+            <div class="field">
+                <label for="senha">Senha</label>
+
+                <input id="senha" type="password" [(ngModel)]="senha" name="senha" autocomplete="off" />
+            </div>
+
+            <button class="login-button" type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <button class="forgot-password">
+            Esqueceu a senha?
+        </button>
+
+        <div class="other-login">
+            <span>Outras formas</span>
+
+            <div class="social-buttons">
+
+                <button class="social google" type="button">
+                    G
+                </button>
+
+                <button class="social linkedin" type="button">
+                    in
+                </button>
+
+                <button class="social facebook" type="button">
+                    f
+                </button>
+
+            </div>
+        </div>
+
+        <div class="separator">
+            <span>Ou</span>
+        </div>
+
+        <button class="register-button" type="button" (click)="cadastroDemo()">
+            Cadastre-se!
+        </button>
+
+    </section>
+
+</main>
