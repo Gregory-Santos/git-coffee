@@ -1,0 +1,36 @@
+.site-footer {
+    background-color: var(--cor-botao-hover); /* Exemplo de fundo escuro, ajuste conforme sua paleta */
+    color: var(--cor-texto-claro);
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    max-height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+    width: auto;
+    display: block;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-social a {
+    color: var(--cor-texto-claro);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
