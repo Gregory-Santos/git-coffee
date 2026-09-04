@@ -1,8 +1,12 @@
 :root {
-  --cor-fundo: #F3EFE9;
+  --cor-fundo: #f0ebe3;
   --cor-fundo-escuro:#463830;
+  --cor-elementos:#ffffff;
+  --cor-elementos2:#F3EFE9;
+  --cor-elementos3:#100f0e;
   --cor-botao: #897A70;
   --cor-botao-hover: #5B4A3F;
+  --cor-botao-hover-claro: #F9F7F5;
   --cor-texto-claro: #F9F7F5;
   --cor-texto-escuro: #100f0e;
   --cor-texto-cinza: #7D7B7A;
