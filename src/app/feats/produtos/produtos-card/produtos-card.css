@@ -1,0 +1,41 @@
+.card{
+    width: 208px;
+    height: 356px;
+    border: none;
+}
+
+.imgcard{
+    width: 208px;
+    height: 236px;
+}
+
+.nome h2{
+    font-size: 1.25em;
+    font-weight: medium;
+}
+
+.valor {
+    font-size: 18px;
+    font-weight: medium;
+    color: #7d7b7a;
+}
+
+button{
+    border-radius: 13px;
+    padding: 6px 20px;
+    text-decoration: none;
+    border: none;
+    background-color: #897A70;
+    color: #F9f7f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: medium;
+
+}
+
+button :hover{
+    background-color: #5b4a3f;
+    transition: ease-in-out 3ms;
+}
