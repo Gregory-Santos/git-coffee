@@ -1,66 +1,114 @@
-
-
 /*Configuração do card global carrinho*/
-.card-carrinho{
-    width: 40%;
+.card-carrinho {
+    width: 45%;
     min-height: 600px;
-    background-color: aliceblue;
+    background-color:  #ffffff;
+    font-family: 'instrument-sans', sans-serif;
     padding: 30px;
     box-sizing: border-box;
     border-radius: 20px;
     margin-left: 20px;
+    margin-top: 30px;
 }
 
-.card-carrinho hr{
-    
-}
+
 
 /*Configuração do card global produto*/
-.produto{
+.produto {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
+    margin-top: 30px;
+
 }
 
 /*Configuração img dos produtos*/
-.produto img{
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+
+.imagem-produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-
-/*Descrição do produto fonte*/
-.produto p{
-font-size: 14px;
-}
 
 /*botão de excluir tamanho*/
-.produto button{
+.produto button {
     font-size: 15px;
     border: none;
     padding: 0;
     cursor: pointer;
     background-color: aliceblue;
-    
+
 }
 
-/*Class Descrição*/
+/*Class Descrição do produto*/
 
-.descricao{
+.descricao {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 10px;
+    flex: 1;
 }
 
-.descricao h1{
+.descricao h1 {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'instrument-sans', sans-serif;
+    font-weight: 700;
 }
 
-.descricao p{
+.descricao p {
     flex-basis: 100%;
     margin: 0;
+    font: 'instrument-sans', sans-serif;
+    color: var(--cor-texto-cinza);
+    font-size: 12px;
+    font-weight: 500;
+
 }
 
+.produto>span {
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+i {
+    font-size: 18px;
+    color: var(--cor-texto-cinza);
+    font-weight: 500;
+}
+
+/*Botão de remover produto*/
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 25px;
+    border: 1px solid var(--cor-texto-cinza);
+    border-radius: 20px;
+    gap: 6px;
+    margin-top: 30px;
+    background-color: #ffffff;
+}
+
+.btn-quantidade{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.quantidade span {
+    font-size: 15px;
+    min-width: 20px;
+    text-align: center;
+    color: var(--cor-texto-cinza);
+    font-weight: 600;
+}
