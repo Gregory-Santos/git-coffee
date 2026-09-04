@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --cor-fundo: #F3EFE9;
+  --cor-botão: #897A70;
+  --cor-botão-hover: #5B4A3F;
+  --cor-texto-claro: #F9F7F5;
+  --cor-texto-escuro: #100f0e;
+  --cor-texto-cinza: #7D7B7A;
+  --border-radius: 13px;
+  --fonte-principal:'instrument-sans', sans-serif;
+}

@@ -1,62 +1,63 @@
-.carousel {
+/* Container principal do carrossel em formato de "Card" */
+.custom-coffee-carousel {
   position: relative;
-  width: 600px;
-  height: 350px;
+  width: 800px;
+  height: 380px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0.2, 0, 0.05);
+  margin: 0 auto;
   overflow: hidden;
-  border-radius: 12px;
 }
 
-.carousel-image {
-  width: 100%;
-  height: 100%;
+/* Garante que o item interno preencha a altura do carrossel */
+.carousel-item {
+  height: 380px;
 }
 
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Estilização da imagem do produto */
+.product-img {
+  max-height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
 }
 
-.previous,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px 15px;
+/* Botão de adicionar personalizado (tom marrom/café) */
+.btn-custom-buy {
+  background-color: #6c584c !important;
+  border-color: #6c584c !important;
+  color: #fff !important;
 }
 
-.previous {
-  left: 10px;
+.btn-custom-buy:hover {
+  background-color: #58463c !important;
 }
 
-.next {
-  right: 10px;
+/* Ajuste do tamanho do texto descritivo */
+.description-text {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  max-width: 320px;
 }
 
-.indicators {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
+/* Posicionamento dos indicadores na parte inferior central */
+.carousel-indicators {
+  margin-bottom: 15px;
 }
 
-.indicators button {
-  width: 10px;
-  height: 10px;
-  border: none;
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: white;
-  opacity: 0.5;
-  cursor: pointer;
+  background-color: #333;
 }
 
-.indicators button.active {
-  opacity: 1;
+/* --- CORREÇÃO DEFINITIVA DAS SETAS DO CARROSSEL --- */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 35px !important;       /* Largura fixa pequena para não invadir o texto */
+  height: 35px !important;      /* Altura fixa */
+  top: 50% !important;          /* Centralizado verticalmente */
+  transform: translateY(-50%);  /* Ajuste fino do centro */
 }
+
