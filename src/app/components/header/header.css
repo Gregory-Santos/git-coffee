@@ -120,3 +120,14 @@ nav a.pagina-ativa {
     color: #111;
     font-weight: 600;
 }
+
+i{
+    transition: 0.2s;
+}
+
+i:hover{
+    background-color: var(--cor-botao);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: var(--cor-texto-claro);
+}
