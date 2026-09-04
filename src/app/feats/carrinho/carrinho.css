@@ -1,0 +1,66 @@
+
+
+/*Configuração do card global carrinho*/
+.card-carrinho{
+    width: 40%;
+    min-height: 600px;
+    background-color: aliceblue;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card-carrinho hr{
+    
+}
+
+/*Configuração do card global produto*/
+.produto{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Configuração img dos produtos*/
+.produto img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+/*Descrição do produto fonte*/
+.produto p{
+font-size: 14px;
+}
+
+/*botão de excluir tamanho*/
+.produto button{
+    font-size: 15px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: aliceblue;
+    
+}
+
+/*Class Descrição*/
+
+.descricao{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.descricao h1{
+    margin: 0;
+    font-size: 16px;
+}
+
+.descricao p{
+    flex-basis: 100%;
+    margin: 0;
+}
+

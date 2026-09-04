@@ -1,12 +1,34 @@
-<p>carrinho works!</p>
-<div>
 
-    
+
+
+<div class="card-carrinho">
+<hr>
+
+
+<!--Imagem de produto-->
+<div class="produto">
+<img src="img/grao-cafe.png" alt="grao de cafe" width="90">
+
+<!--Titulo, descrição e botão de excluir produto-->
+<div class="descricao">
+<h1>Café em grãos torra média</h1>
+<button (click)="CarrinhoService.zerar()"><i class="fa-regular fa-trash-can"></i></button> 
+<p> Café colhido nas terras mineiras com torra média</p>
 </div>
+
+
+<span>R$ 00,00</span>
+</div>
+
 <div class="quantidade">
 <!-- Botões da função de quantidade e diminuição do carrinho-->
     <button (click)="CarrinhoService.incrementar()"><i class="fa-solid fa-plus"></i></button>
     <span>{{ CarrinhoService.contador() }}</span>
     <button (click)="CarrinhoService.diminuir()"><i class="fa-solid fa-minus"></i></button>
-    <button (click)="CarrinhoService.zerar()"><i class="fa-solid fa-trash-can"></i></button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 </div>
+
+
+
+</div>
+
