@@ -1,34 +1,33 @@
-
-
-
 <div class="card-carrinho">
-<hr>
+    <hr>
+    <!--Imagem de produto-->
+    <div class="produto">
+        <div class="imagem-produto">
+        <img  src="img/grao-cafe.png" alt="grao de cafe" width="90">     
+        
+    </div>
+
+        <!--Titulo, descrição e botão de excluir produto-->
+        <div class="descricao">
+            <h1>Café em grãos torra média</h1>
+            <button (click)="CarrinhoService.zerar()"><i class="fa-regular fa-trash-can"></i></button>
+            <p> Café colhido nas terras mineiras com torra média</p>
+            <div class="quantidade">
+        <!-- Botões da função de quantidade e diminuição do carrinho-->
+        <button  class="btn-quantidade" (click)="CarrinhoService.diminuir()">-</button>
+        <span>{{ CarrinhoService.contador() }}</span>
+        <button class="btn-quantidade" (click)="CarrinhoService.incrementar()">+</button>
+        </div>
+        </div>
 
 
-<!--Imagem de produto-->
-<div class="produto">
-<img src="img/grao-cafe.png" alt="grao de cafe" width="90">
+        <span>R$ 00,00</span> 
+   
 
-<!--Titulo, descrição e botão de excluir produto-->
-<div class="descricao">
-<h1>Café em grãos torra média</h1>
-<button (click)="CarrinhoService.zerar()"><i class="fa-regular fa-trash-can"></i></button> 
-<p> Café colhido nas terras mineiras com torra média</p>
+    </div>
+
+   
+
+
+
 </div>
-
-
-<span>R$ 00,00</span>
-</div>
-
-<div class="quantidade">
-<!-- Botões da função de quantidade e diminuição do carrinho-->
-    <button (click)="CarrinhoService.incrementar()"><i class="fa-solid fa-plus"></i></button>
-    <span>{{ CarrinhoService.contador() }}</span>
-    <button (click)="CarrinhoService.diminuir()"><i class="fa-solid fa-minus"></i></button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-</div>
-
-
-
-</div>
-
