@@ -1,5 +1,7 @@
 /*Configuração do card global carrinho*/
 .card-carrinho {
+    display: inline-block;
+    vertical-align: top;
     width: 823px;
     height: 862px;
     min-height: 800px;
@@ -14,6 +16,25 @@
 }
 
 
+.espaco-topo h1 {
+    font-size: 20px;
+    margin-top: 0px;
+    color: #423E3C;
+    font-weight: 600;
+    font-family: 'instrument-sans', sans-serif;
+}
+
+.espaco-topo {
+    width: 100%;
+    height: 70px;
+}
+
+.espaco-topo hr {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    border: none;
+    border-top: 2px solid #685447F0;
+}
 
 /*Configuração do card global produto*/
 .produto {
@@ -21,10 +42,9 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-top: 4px;
     width: 662px;
-    height: 154px;
-
+    height: 159px;
+    margin-left: 24px;
 }
 
 /*Configuração img dos produtos*/
@@ -75,7 +95,7 @@ img {
 .descricao p {
     flex-basis: 100%;
     margin: 0;
-    font: 'instrument-sans', sans-serif;
+    font-family: 'instrument-sans', sans-serif;
     color: #4C4C4C;
     font-size: 16px;
     font-weight: 500;
@@ -95,7 +115,7 @@ i {
     height: 21px;
 }
 
-/*Botão de remover produto*/
+/*Botão de remover produto, aumentar e diminuir quantidade*/
 
 .quantidade {
     display: flex;
@@ -126,4 +146,92 @@ i {
     text-align: center;
     color: var(--cor-texto-cinza);
     font-weight: 600;
+}
+
+
+
+/*Card de resumo de compra*/
+
+.card-resumoCompra {
+    display: inline-block;
+    vertical-align: top;
+    width: 451px;
+    height: 454px;
+    background-color: #F9F6F1;
+    border-radius: 13px;
+    margin-left: 116px;
+    margin-top: 32px;
+}
+
+.card-resumoCompra h1 {
+    font-size: 20px;
+    margin-top: 3px;
+    margin-left: 15px;
+    color: #423E3C;
+    margin: 20px;
+
+}
+
+.card-resumoCompra hr {
+    border-top: 2px solid #685447F0;
+    margin: 20px 0;
+}
+
+/*Produto e quantidade, envio*/
+.produto-frete {
+    width: 400px;
+    height: auto;
+    margin-top: 9px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 10px;
+}
+
+.produto-frete p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/*valores de produto e envio*/
+.produto-frete span {
+    justify-self: end;
+    font-size: 16px;
+}
+
+/*observaçoes do produto*/
+
+.produto-frete p:nth-of-type(3),
+.produto-frete span:nth-of-type(3) {
+    margin-top: 80px;
+}
+
+/*botão de finalizar compra*/
+.finalizar-compra {
+    width: 100%;
+    height: 48px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 13px;
+    margin-left: 50px;
+    background-color: #705a4c;
+
+    color: #F9F7F5;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.finalizar-compra:hover {
+    background-color: #604b3f;
+}
+
+.finalizar-compra:active {
+    transform: scale(0.98);
 }
