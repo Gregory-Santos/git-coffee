@@ -1,11 +1,15 @@
+
+
 <div class="card-carrinho">
-    <hr>
     <!--Imagem de produto-->
+   <div class="espaco-topo"> <h1>
+    Seus produtos <hr>
+   </h1> </div>
     <div class="produto">
         <div class="imagem-produto">
-        <img  src="img/cafe-image-teste.webp" alt="grao de cafe">     
-        
-    </div>
+            <img src="img/cafe-image-teste.webp" alt="grao de cafe">
+
+        </div>
 
         <!--Titulo, descrição e botão de excluir produto-->
         <div class="descricao">
@@ -13,21 +17,41 @@
             <button (click)="CarrinhoService.zerar()"><i class="fa-regular fa-trash-can"></i></button>
             <p> Café colhido nas terras mineiras com torra média</p>
             <div class="quantidade">
-        <!-- Botões da função de quantidade e diminuição do carrinho-->
-        <button  class="btn-quantidade" (click)="CarrinhoService.diminuir()">-</button>
-        <span>{{ CarrinhoService.contador() }}</span>
-        <button class="btn-quantidade" (click)="CarrinhoService.incrementar()">+</button>
-        </div>
+                <!-- Botões da função de quantidade e diminuição do carrinho-->
+                <button class="btn-quantidade" (click)="CarrinhoService.diminuir()">-</button>
+                <span>{{ CarrinhoService.contador() }}</span>
+                <button class="btn-quantidade" (click)="CarrinhoService.incrementar()">+</button>
+            </div>
         </div>
 
-
-        <span>R$ 00,00</span> 
-   
+        <!-- valor do produto com soma ao adicionar mais produtos-->
+        <span>R$ 00,00</span>
 
     </div>
+</div>
 
-   
+<!--resumo da compra, quantidade de produto, soma, valor do frete, valor total, botão de finalizar compra-->
+<div class="card-resumoCompra">
 
+
+    <div><h1>Resumo da compra</h1></div>
+    <hr>
+    <div class="produto-frete">
+        <p>Produtos(0)</p>
+        <span>R$ 00,00</span>
+        <p>Envio:</p>
+        <span>R$ 00,00</span>
+
+
+        <p>Observações:</p>
+        <span>--</span>
+
+        <p>Total</p>
+        <span>R$ 00,00</span>
+
+
+        <button class="finalizar-compra">Finalizar compra</button>
+    </div>
 
 
 </div>
