@@ -18,7 +18,7 @@ export class CarrinhoService {
     protected carrinho = signal<ItemCarrinhoInterface[]>([
      {
         produto: this.produtoFicticio(),
-        quantidade: 1
+        quantidade: 0
      }
     ])
 
