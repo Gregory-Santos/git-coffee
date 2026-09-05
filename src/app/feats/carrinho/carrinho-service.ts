@@ -11,9 +11,7 @@ export class CarrinhoService {
             nome: 'Café',
             descricao: 'Café com torra média, toques de caramelo',
             preco: 20.90
-    })
-
-
+    });
 
     protected carrinho = signal<ItemCarrinhoInterface[]>([
      {
