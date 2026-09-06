@@ -15,7 +15,7 @@
 
 }
 
-
+/*espaço acima da descrição de produto no carrinho*/
 .espaco-topo h1 {
     font-size: 20px;
     margin-top: 0px;
@@ -49,7 +49,6 @@
 
 /*Configuração img dos produtos*/
 
-
 img {
     height: 155px;
     width: 142px;
@@ -64,7 +63,7 @@ img {
 }
 
 
-/*botão de excluir tamanho*/
+/*botão de excluir*/
 .produto button {
     font-size: 16px;
     border: none;
@@ -150,7 +149,7 @@ i {
 
 
 
-/*Card de resumo de compra*/
+/*Card de resumo de compra css global e titulo*/
 
 .card-resumoCompra {
     display: inline-block;
@@ -199,10 +198,10 @@ i {
     font-size: 16px;
 }
 
-/*observaçoes do produto*/
+/*observaçoes do produto e total, posição dentro do card*/
 
-.produto-frete p:nth-of-type(3),
-.produto-frete span:nth-of-type(3) {
+.produto-frete p:nth-of-type(2),
+.produto-frete span:nth-of-type(2) {
     margin-top: 80px;
 }
 
@@ -215,14 +214,10 @@ i {
     border-radius: 13px;
     margin-left: 50px;
     background-color: #705a4c;
-
     color: #F9F7F5;
-
     font-size: 24px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background-color 0.2s ease,
         transform 0.1s ease;
@@ -234,4 +229,16 @@ i {
 
 .finalizar-compra:active {
     transform: scale(0.98);
+}
+
+
+/*linha onde se encontra envio e preço*/
+.linha {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linha p {
+    margin: 0;
 }
