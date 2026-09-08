@@ -30,7 +30,7 @@
 
 <div class="filtro">
     <label for="organizar">Organizar por</label>
-    <select id="organizar" [(ngModel)]="criterioOrganizacao">
+    <select id="organizar" [(ngModel)]="criterioOrganizacao ">
         <option value="">Todas</option>
         <option value="menor-preco">Menor Preço</option>
         <option value="maior-preco">Maior Preço</option>
@@ -41,8 +41,9 @@
     <div class="btn">
         <button type="submit">Filtrar</button>
 
-        <button class="btn-reset"   type="reset" (click)="limparFiltros()">Limpar Filtros</button>
+        <button class="btn-reset"   type="button" (click)="limparFiltros()">Limpar Filtros  </button>
     
 </div>
 
 </form>
+

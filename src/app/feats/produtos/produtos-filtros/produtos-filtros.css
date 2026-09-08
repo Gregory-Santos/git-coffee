@@ -1,0 +1,100 @@
+
+.filtros {
+    width: 90%;
+    margin: 30px auto;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: #463830;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.filtro label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5b4a3f;
+}
+
+
+.filtro input,
+.filtro select {
+    width: 170px;
+    height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid #d6d1cd;
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.filtro input:focus,
+.filtro select:focus {
+    border-color: #897a70;
+}
+
+
+.busca input {
+    width: 220px;
+}
+
+
+.btn {
+    display: flex;
+    gap: 10px;
+}
+
+
+.btn button {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #897a70;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.btn button:hover {
+    background-color: #5b4a3f;
+}
+
+
+.btn .btn-reset {
+    background-color: transparent;
+    color: #5b4a3f;
+    border: 1px solid #897a70;
+}
+
+
+.btn .btn-reset:hover {
+    background-color: #897a70;
+    color: white;
+}

@@ -1,7 +1,8 @@
-import [ FormsModule]from '@angular/forms';
+import { FormsModule } from "@angular/forms";
+import { Component } from '@angular/core';
 
 @Component({
-  imports: [FormsModule]
+  imports: [FormsModule],
   selector: 'app-produtos-filtros',
   styleUrl: './produtos-filtros.css',
   templateUrl: './produtos-filtros.html',
@@ -11,7 +12,7 @@ export class ProdutosFiltros {
   filtros={
     busca:'',
     categoria:'',
-    precoMaximo: null as number/null,
+    precoMaximo: null,
     ordenacao:'',
   };
 
