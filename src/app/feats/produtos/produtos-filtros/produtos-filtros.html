@@ -1,0 +1,111 @@
+<!-- Botão que aparece na página -->
+<div class="filtros-container">
+
+    <button
+        class="btn-filtros"
+        type="button"
+        (click)="abrirFiltros()"
+    >
+        ⚙ Filtros
+    </button>
+
+
+    <!-- Painel de filtros -->
+    @if (filtrosAbertos) {
+
+        <form class="filtros">
+
+           
+
+
+            <div class="filtro">
+                <label for="categoria">
+                    Categorias
+                </label>
+
+                <select
+                    id="categoria"
+                    (change)="filtros.categoria = $any($event.target).value"
+                >
+                    <option value="">
+                        Todas
+                    </option>
+
+                    <option value="bebida-quente"> 
+                        Bebidas Quentes
+                    </option>
+
+                    <option value="bebida-gelada">
+                        Bebidas Geladas
+                    </option>
+
+                    <option value="bebida-especial">
+                        Bebidas Especiais
+                    </option>
+
+                    <option value="sobremesa">
+                        Sobremesas
+                    </option>
+
+                     <option value="graos">
+                        Grãos de Café
+                    </option>
+
+                </select>
+            </div>
+
+
+
+
+            <div class="filtro">
+                <label for="ordenacao">
+                    Organizar por
+                </label>
+
+                <select
+                    id="ordenacao"
+                    (change)="filtros.ordenacao = $any($event.target).value"
+                >
+                    <option value="">
+                        Todas
+                    </option>
+
+                    <option value="menor-preco">
+                        Menor preço
+                    </option>
+
+                    <option value="maior-preco">
+                        Maior preço
+                    </option>
+
+                    <option value="nome">
+                        Marca
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="btn">
+
+                <button
+                    type="button"
+                    (click)="aplicarFiltros()"
+                >
+                    Filtrar
+                </button>
+
+                <button
+                    class="btn-reset"
+                    type="button"
+                    (click)="limparFiltros()"
+                >
+                    Limpar
+                </button>
+
+            </div>
+
+        </form>
+
+    }
+
+</div>
