@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProdutosCard } from "./produtos-card/produtos-card";
 import { PRODUTOS_API } from './models/produtos-api/produtos-api';
+import { ProdutosFiltros } from "./produtos-filtros/produtos-filtros";
 
 @Component({
   imports: [ProdutosCard, ProdutosFiltros],
