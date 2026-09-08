@@ -1,4 +1,3 @@
-
 .card {
     width: 208px;
     height: 356px;
@@ -29,7 +28,8 @@
 
 button {
     border-radius: 13px;
-    padding: 5px 20px;
+    padding: 6px 5px;
+    width: 100%;
     border: none;
     background-color: #897A70;
     color: #F9f7f5;

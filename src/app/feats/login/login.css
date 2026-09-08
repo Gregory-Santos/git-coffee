@@ -12,6 +12,7 @@
   box-sizing: border-box;
 }
 
+
 .login-page {
   width: 100%;
   height: 100vh;
@@ -23,11 +24,9 @@
   padding-right: 6%;
 
   background-image:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.08)
-    ),
+      rgba(0, 0, 0, 0.08)),
     url('/img/grao-cafe.png');
 
   background-size: cover;
@@ -210,7 +209,7 @@
   text-align: center;
 }
 
-.other-login > span {
+.other-login>span {
   color: #111111;
 
   font-size: 17px;
@@ -232,7 +231,9 @@
 
   margin-top: 15px;
 }
-
+a{
+  text-decoration: none;
+}
 .social {
   width: 30px;
   height: 30px;
@@ -268,7 +269,7 @@
 
   font-size: 21px;
   font-weight: bold;
-
+  
   box-shadow:
     0 1px 5px rgba(0, 0, 0, 0.18);
 }

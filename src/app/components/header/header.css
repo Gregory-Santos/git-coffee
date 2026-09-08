@@ -20,12 +20,12 @@
 .logo {
     display: flex;
     align-items: center;
-
+    margin: 20px;
     width: 220px;
 }
 
 .logo img {
-    width: 150px;
+    width: 110px;
     height: auto;
     object-fit: contain;
 }
@@ -140,4 +140,28 @@ nav i{
 nav i:hover{
     background-color: var(--cor-botao-hover);
     color: var(--cor-texto-claro-hover);
+}
+
+
+/*Config de icone no carrinho quando se adiciona produto*/
+
+.carrinho-icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #705a4c;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
 }

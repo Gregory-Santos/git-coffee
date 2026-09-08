@@ -10,7 +10,7 @@
 }
 
 .footer-logo img {
-    max-height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+    max-height: 70px; /* Ajuste o tamanho da logo conforme necessário */
     width: auto;
     display: block;
 }
@@ -25,7 +25,6 @@
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-
 
 /* Responsivo para telas menores */
 @media (max-width: 600px) {
