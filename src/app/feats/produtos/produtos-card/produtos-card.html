@@ -1,6 +1,3 @@
-<!--Foi adicionado 3 cards de produtos para fazer o teste com css e garantir a funcinalidade do grid template-->
-
-
 <div class="card-container">
 
 <div class="card">
@@ -8,15 +5,13 @@
         <img src="caminho-da-imagem.jpg" alt="img">
     </div>
 
-    <div class="nome">
-        <h2>Nome Produto</h2>
+    <div class="nome"></div>
+        <h2>{{ produto().nome }}</h2>
     </div>
 
     <div class="valor">
-        <p>R$00,00</p>
+        <p>R$ {{produto().preco}}</p>
     </div>
-        <button>Adicionar H </button> 
-
-</div>
+        <button>Adicionar</button> 
 
 </div>
