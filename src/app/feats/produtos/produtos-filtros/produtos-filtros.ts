@@ -1,36 +1,10 @@
-import { FormsModule } from "@angular/forms";
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [FormsModule],
+  imports: [],
   selector: 'app-produtos-filtros',
-  styleUrl: './produtos-filtros.css',
   templateUrl: './produtos-filtros.html',
+  styleUrl: './produtos-filtros.css',
 })
 export class ProdutosFiltros {
-
-  filtros={
-    busca:'',
-    categoria:'',
-    precoMaximo: null,
-    ordenacao:'',
-  };
-
-  aplicarFiltros(){
-    console.log('filtros aplicados:');
-    console.log(this.filtros);
-  }
-
-  limparFiltros(){
-
-    this.filtros = {
-    busca:'',
-    categoria:'',
-    precoMaximo:null,
-    ordenacao: ''
-  };
-
-  console.log('filtros limpos');
-
-}
 }
