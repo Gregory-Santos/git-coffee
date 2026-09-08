@@ -6,8 +6,10 @@
    <app-produtos-filtros></app-produtos-filtros>
     
 
-<div class="card" id="produtocard">
-    <app-produtos-card></app-produtos-card>
-</div>
+<div class="card-container">
+    @for (produto of produtos; track produto.id){
+ <app-produtos-card [produto]="produto"></app-produtos-card>
+    } 
+
 </div>
 

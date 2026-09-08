@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProdutosCard } from "./produtos-card/produtos-card";
 import { ProdutosFiltros } from "./produtos-filtros/produtos-filtros";
+import { PRODUTOS_API } from './models/produtos-api/produtos-api';
 
 @Component({
   imports: [ProdutosCard, ProdutosFiltros],
@@ -8,4 +9,7 @@ import { ProdutosFiltros } from "./produtos-filtros/produtos-filtros";
   styleUrl: './produtos.css',
   templateUrl: './produtos.html',
 })
-export class Produtos {}
+export class Produtos {
+
+  produtos = PRODUTOS_API;
+}
