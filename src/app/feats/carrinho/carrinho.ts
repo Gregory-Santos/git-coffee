@@ -9,6 +9,7 @@ import { CarrinhoService } from './carrinho-service';
 })
 export class Carrinho {
 
-  protected readonly CarrinhoService = inject(CarrinhoService)
+  protected readonly CarrinhoService = inject(CarrinhoService);
 
+  
 }
