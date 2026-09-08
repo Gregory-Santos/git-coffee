@@ -1,29 +1,22 @@
-import { Component } from '@angular/core';
 import { Produto } from '../produto';
 
-export const PRODUTOS: Produto[] = [
+export const PRODUTOS_API: Produto[] = [
   {
     id: 1,
-    nome: 'Café Gelado',
-    preco: 14.90,
-    descricao: 'Café, leite, gelo e canela.'
+    nome: 'Cappuccino Gelado',
+    descricao: 'café, leite e gelo',
+    preco: 23.90
   },
   {
     id: 2,
     nome: 'Café Caramelo',
-    preco: 16.90,
-    descricao: 'Café, leite e caramelo.'
+    descricao: 'café, leite e caramelo',
+    preco: 24.90
+  },
+  {
+    id: 3,
+    nome: 'Chocolate Quente',
+    descricao: 'leite e chocolate',
+    preco: 22.90
   }
 ];
-
-
-@Component({
-  imports: [],
-  selector: 'app-produtos-api',
-  styleUrl: './produtos-api.css',
-  templateUrl: './produtos-api.html',
-})
-export class ProdutosApi {
-
-  
-}
