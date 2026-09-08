@@ -20,12 +20,12 @@
 .logo {
     display: flex;
     align-items: center;
-
+    margin: 20px;
     width: 220px;
 }
 
 .logo img {
-    width: 150px;
+    width: 110px;
     height: auto;
     object-fit: contain;
 }
