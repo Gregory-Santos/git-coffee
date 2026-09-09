@@ -10,7 +10,8 @@ export class CarrinhoService {
             id: 1,
             nome: 'Café',
             descricao: 'Café com torra média, toques de caramelo',
-            preco: 20.90
+            preco: 20.90,
+            img: 'img/grao-cafe.png'
         });
 
     //Chamando a interface do meu carrinho//

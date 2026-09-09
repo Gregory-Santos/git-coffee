@@ -2,10 +2,10 @@
 
 <div class="card">
     <div class="imgcard">
-        <img src="caminho-da-imagem.jpg" alt="img">
+        <img [src]="produto().img" [alt]="produto().nome">
     </div>
 
-    <div class="nome"></div>
+    <div class="nome">
         <h2>{{ produto().nome }}</h2>
     </div>
 
