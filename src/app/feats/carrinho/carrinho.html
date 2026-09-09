@@ -8,6 +8,8 @@
             <hr>
         </h1>
     </div>
+
+    @if (CarrinhoService.carrinho().length >0) {
     <div class="produto">
         <div class="imagem-produto">
             <img src="img/cafe-image-teste.webp" alt="grao de cafe">
@@ -16,9 +18,9 @@
 
         <!--Titulo, descrição e botão de excluir produto-->
         <div class="descricao">
-            <h1>Café em grãos torra média</h1>
+            <h1>{{CarrinhoService.carrinho()[0].produto.nome}}</h1>
             <button (click)="CarrinhoService.zerar()"><i class="fa-regular fa-trash-can"></i></button>
-            <p> Café colhido nas terras mineiras com torra média</p>
+            <p> {{CarrinhoService.carrinho()[0].produto.descricao}}</p>
             <div class="quantidade">
 
                 <!-- Botões da função de quantidade e diminuição do carrinho -->
@@ -26,7 +28,7 @@
                 <span>{{ CarrinhoService.contador() }}</span>
                 <button class="btn-quantidade" (click)="CarrinhoService.incrementar()">+</button>
             </div>
-        </div>
+        </div> 
 
         <!-- valor do produto com soma ao adicionar mais produtos preço*contador-->
         @for (produto of CarrinhoService.carrinho(); track produto.produto.id) {
@@ -36,7 +38,9 @@
 
 
 
-    </div>
+    </div>}
+
+
 </div>
 
 <!--resumo da compra, quantidade de produto, soma, valor do frete, valor total, botão de finalizar compra-->
