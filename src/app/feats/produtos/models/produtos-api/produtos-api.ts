@@ -19,4 +19,5 @@ export const PRODUTOS_API: Produto[] = [
     descricao: 'leite e chocolate',
     preco: 22.90
   }
+
 ];

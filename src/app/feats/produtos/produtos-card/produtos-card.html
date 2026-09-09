@@ -1,17 +1,21 @@
 <div class="card-container">
 
-<div class="card">
-    <div class="imgcard">
-        <img src="caminho-da-imagem.jpg" alt="img">
-    </div>
+    <div class="card">
+        <div class="imgcard">
+            <img src="caminho-da-imagem.jpg" alt="img">
+        </div>
 
-    <div class="nome"></div>
+        <div class="nome"></div>
         <h2>{{ produto().nome }}</h2>
     </div>
 
     <div class="valor">
         <p>R$ {{produto().preco}}</p>
     </div>
-        <button>Adicionar</button> 
-
+    <button (click)="adicionarProduto()">Adicionar</button>
+    @if (adicionado()) {
+        
+        <span>Produto adicionado ao carrinho</span>
+    }
+<!--Acima span de aviso de adicionar no carrinho-->
 </div>
