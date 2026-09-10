@@ -5,17 +5,16 @@ import { PRODUTOS_API } from '../produtos/models/produtos-api/produtos-api';
 
 @Service()
 export class CarrinhoService {
-    //Chamando a interface do produto//
 
-    //Chama interface do meu carrinho, chama produto API//
+    //Chama interface do meu carrinho, chama produto_API(interface criada pelo grupo)//
     carrinho = signal<ItemCarrinhoInterface[]>([]);
 
-    //contador inicia com zero, mas o ato de adicionar vai ser 1//
+    //contador inicia com zero, mas o ato de adicionar vai ser 1. Soma as quantidades do contador//
     contador = computed(() =>
         this.carrinho().reduce((total, item) => total + (item.quantidade ?? 0), 0),
     );
 
-    //Calculo do valor do produto vezes o contador//
+    //Calculo do valor do produto vezes o contador. Guarda os valores e vai somando com a quantidade //
     total = computed(() =>
         this.carrinho().reduce(
             (total, item) => total + item.produto.preco * (item.quantidade ?? 0),
@@ -54,7 +53,7 @@ export class CarrinhoService {
         );
     }
 
-    //Função da lixeira, ela zera o contador, mas precisa excluir o produto//
+    //Função da lixeira, ela exclui o produto do carrinho//
     zerar(id: number) {
         this.carrinho.update((itens) => itens.filter((item) => item.produto.id !== id));
     }
