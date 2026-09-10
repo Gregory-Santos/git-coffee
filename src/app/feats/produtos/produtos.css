@@ -1,10 +1,14 @@
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
-    gap: 100px;
+    gap: 50px;
     justify-content: center;
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
+    padding-left: 54px; 
+    padding-right: 54px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .filtros-container{
