@@ -6,4 +6,5 @@
 .app-body {
     min-height: 75vh;
     flex: 1;
+    background-color: var(--cor-fundo);
 }
