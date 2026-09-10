@@ -48,5 +48,9 @@ button:hover {
 /*span de produto adicionado ao carrinho*/
 
 span{
-    background-color: #5b4a3f;
+    font-size: 16px;
+}
+
+.adicionado{
+    background-color: #DFF5E5;
 }

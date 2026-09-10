@@ -7,34 +7,39 @@
                 <hr />
             </h1>
         </div>
+
+        @for (item of CarrinhoService.carrinho(); track item.produto.id) {
         <div class="produto">
             <div class="imagem-produto">
-                <img src="img/cafe-image-teste.webp" alt="grao de cafe" />
+                <img [src]="item.produto" alt="item.produto.nome" />
             </div>
 
             <!--Titulo, descrição e botão de excluir produto-->
             <div class="descricao">
-                <h1>Café em grãos torra média</h1>
-                <button (click)="CarrinhoService.zerar()">
+                <h1>{{item.produto.nome}}</h1>
+                <button (click)="CarrinhoService.zerar(item.produto.id)">
                     <i class="fa-regular fa-trash-can"></i>
                 </button>
-                <p>Café colhido nas terras mineiras com torra média</p>
+                <p>{{item.produto.descricao}}</p>
                 <div class="quantidade">
+
                     <!-- Botões da função de quantidade e diminuição do carrinho -->
-                    <button class="btn-quantidade" (click)="CarrinhoService.diminuir()">-</button>
-                    <span>{{ CarrinhoService.contador() }}</span>
-                    <button class="btn-quantidade" (click)="CarrinhoService.incrementar()">
+                    <button class="btn-quantidade" (click)="CarrinhoService.diminuir(item.produto.id)">-</button>
+                    <span>{{ item.quantidade }}</span>
+                    <button class="btn-quantidade" (click)="CarrinhoService.incrementar(item.produto.id)">
                         +
                     </button>
                 </div>
             </div>
 
             <!-- valor do produto com soma ao adicionar mais produtos preço*contador-->
-            @for (produto of CarrinhoService.carrinho(); track produto.produto.id) {
-                <span>R$ {{ CarrinhoService.total().toFixed(2) }}</span>
-            }
+
+            <span class="preco">R$ {{ item.produto.preco.toFixed(2) }}</span>
+
         </div>
+        }
     </div>
+
 
     <!--resumo da compra, quantidade de produto, soma, valor do frete, valor total, botão de finalizar compra-->
     <div class="card-resumoCompra">
@@ -44,16 +49,16 @@
         <hr />
         <div class="produto-frete">
             <!--preço*contador no resumo da compra-->
-            @for (item of CarrinhoService.carrinho(); track $index) {
-                <p>Produtos({{ CarrinhoService.contador() }})</p>
-            }
+           
+            <p>Produtos({{ CarrinhoService.contador() }})</p>
+    
             <span>R$ {{ CarrinhoService.total().toFixed(2) }}</span>
 
             <div class="linha">
                 <!--valor do frete, contador 1, frete 7 reais-->
                 <p>Envio:</p>
                 @if (CarrinhoService.contador() > 0) {
-                    <span>R$ {{ CarrinhoService.envio().toFixed(2) }}</span>
+                <span>R$ {{ CarrinhoService.envio().toFixed(2) }}</span>
                 }
             </div>
 
@@ -63,9 +68,9 @@
 
             <!--valor total com frete-->
             <p>Total:</p>
-            @for (produto of CarrinhoService.carrinho(); track $index) {
-                <span>R$ {{ CarrinhoService.totalFinal().toFixed(2) }}</span>
-            }
+            
+            <span>R$ {{ CarrinhoService.totalFinal().toFixed(2) }}</span>
+        
 
             <!--botão de finalizar compra-->
             <button class="finalizar-compra">Finalizar compra</button>
