@@ -71,4 +71,5 @@ export const PRODUTOS_API: Produto[] = [
     preco: 19.90,
     img: 'img/cafe-americano.png'
   }
+
 ];

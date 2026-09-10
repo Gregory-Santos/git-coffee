@@ -25,9 +25,9 @@
 
   background-image:
     linear-gradient(90deg,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.08)),
-    url('/img/grao-cafe.png');
+      rgba(0, 0, 0, 0.342),
+      rgba(41, 41, 41, 0.411)),
+    url('/img/fundo-café.jpg');
 
   background-size: cover;
   background-position: center;
@@ -204,7 +204,7 @@
 .other-login {
   width: 100%;
 
-  margin-top: 30px;
+  margin-top: 20px;
 
   text-align: center;
 }
@@ -312,7 +312,7 @@ a{
   justify-content: center;
   align-items: center;
 
-  margin: 25px 0 30px;
+  margin: 12px 0 15px;
 }
 
 .separator span {
@@ -380,11 +380,13 @@ a{
     width: 100%;
     min-height: auto;
 
-    padding: 30px;
+    padding: 20px;
+    margin: 0, 0, 18px;
   }
 
   .login-card h1 {
     font-size: 23px;
+    margin: 0, 0, 18;
   }
 
 }

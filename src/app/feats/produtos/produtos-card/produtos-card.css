@@ -46,3 +46,9 @@ button:hover {
     background-color: var(--cor-botao-hover);
     transition: ease-in-out 3ms;
 }
+
+/*span de produto adicionado ao carrinho*/
+
+span{
+    background-color: #5b4a3f;
+}
