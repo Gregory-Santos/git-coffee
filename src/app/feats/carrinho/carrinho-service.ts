@@ -10,34 +10,38 @@ export class CarrinhoService {
 
 
     //Chama interface do meu carrinho, chama produto API//
-    carrinho = signal<ItemCarrinhoInterface[]>([
-        {
-            produto: PRODUTOS_API[0],
-            quantidade: 0
-
-        }
-
-    ]);
+    carrinho = signal<ItemCarrinhoInterface[]>([]);
 
 
     //contador inicia com zero, mas o ato de adicionar vai ser 1//
-    contador = computed(()=> this.carrinho() [0].quantidade ?? 0)
+    contador = computed(() =>
+        this.carrinho().reduce(
+            (total, item) => total + (item.quantidade ?? 0),
+            0
+        )
+    );
 
 
     //Calculo do valor do produto vezes o contador//
-    total = computed(() => {
-        if (this.contador() === 0) {
-            return 0;
-        } return this.carrinho()[0].produto.preco * this.contador();
-    });
+    total = computed(() =>
+        this.carrinho().reduce(
+            (total, item) =>
+                total + item.produto.preco * (item.quantidade ?? 0),
+            0
+        )
+    );
 
     //Função do + aperta e o contador aumenta a quantidade de produto//
-    incrementar() {
+    incrementar(id: number) {
         this.carrinho.update(itens =>
-            itens.map(item => ({
-                ...item,
-                quantidade: (item.quantidade ?? 0) + 1,
-            }))
+            itens.map(item =>
+                item.produto.id === id
+                    ? {
+                        ...item,
+                        quantidade: (item.quantidade ?? 0) + 1
+                    }
+                    : item
+            )
         );
     }
 
@@ -46,19 +50,26 @@ export class CarrinhoService {
 
 
     //Função do - aperta e o contador diminui a quantidade de produto, ele começa no zero//
-    diminuir() {
-        this.carrinho.update(itens => itens.map(item => ({
-            ... item,
-            quantidade: Math.max((item.quantidade ?? 0) -1,0) 
-        }))
+    diminuir(id: number) {
+        this.carrinho.update(itens =>
+            itens.map(item =>
+                item.produto.id === id
+                    ? {
+                        ...item,
+                        quantidade: Math.max((item.quantidade ?? 0) - 1, 0)
+                    }
+                    : item
+            )
         );
     }
 
 
 
     //Função da lixeira, ela zera o contador, mas precisa excluir o produto//
-    zerar() {
-        this.carrinho.set([]);
+    zerar(id: number) {
+        this.carrinho.update(itens =>
+            itens.filter(item => item.produto.id !== id)
+        );
     }
 
     //calculo do total no resumo da compra total, se o valor do contador for 0 o envio vai ser 0 //
@@ -66,28 +77,26 @@ export class CarrinhoService {
 
 
 
+    //função de adicionar produto pelo botão de adicionar na Page produtos //
 
+    adicionado = signal(false);
 
-//função de adicionar produto pelo botão de adicionar na Page produtos //
+    adicionarProduto(produto: Produto) {
+        this.carrinho.update(itens => {
 
-adicionado= signal(false);
+            const existente = itens.find(
+                item => item.produto.id === produto.id
+            );
 
-adicionarProduto(produto: Produto){
-this.carrinho.update(itens => {
+            if (existente) {
+                return itens.map(item => item.produto.id === produto.id
+                    ? { ...item, quantidade: (item.quantidade ?? 0) + 1 }
+                    : item
+                );
+            }
 
-    const existente = itens.find(
-        item => item.produto.id === produto.id
-    );
+            return [...itens, { produto, quantidade: 1 }];
+        })
 
-    if(existente){
-        return itens.map(item => item.produto.id === produto.id
-            ? { ...item, quantidade: (item.quantidade ?? 0) + 1 }
-            : item
-        );
     }
-    
-    return [...itens, { produto, quantidade: 1 }];
-})
-
-}
 }
