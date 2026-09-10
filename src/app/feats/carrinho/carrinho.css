@@ -47,10 +47,17 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     width: 662px;
     height: 159px;
     margin-left: 24px;
+    border-bottom: 1px solid #685447F0;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.produto + .produto {
+    margin-top: 10px;
 }
 
 /*Configuração img dos produtos*/
@@ -107,9 +114,12 @@ img {
 
 }
 
-.produto>span {
-    margin-left: 30px;
+.produto span {
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
 }
 
 i {
@@ -118,6 +128,7 @@ i {
     font-weight: 500;
     width: 21px;
     height: 21px;
+    margin-top: 4px;
 }
 
 /*Botão de remover produto, aumentar e diminuir quantidade*/
@@ -131,8 +142,8 @@ i {
     font-size: 16px;
     border: 1px solid #4C4C4C;
     border-radius: 13px;
-    gap: 2px;
-    margin-top: 80px;
+    gap: 0px;
+    margin-top: 75px;
 }
 
 .btn-quantidade {
@@ -151,9 +162,13 @@ i {
     text-align: center;
     color: var(--cor-texto-cinza);
     font-weight: 600;
+    margin-left: 10px;
 }
 
-
+.unidade {
+    font-size: 12px;
+    color: var(--cor-texto-cinza);
+}
 
 /*Card de resumo de compra css global e titulo*/
 
@@ -244,6 +259,9 @@ i {
     justify-content: space-between;
     align-items: center;
 }
+
 .linha p {
     margin: 0;
 }
+
+/*abreviação de und ao lado do preço no carrinho*/

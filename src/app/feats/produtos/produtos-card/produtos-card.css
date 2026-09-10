@@ -66,6 +66,12 @@ button:hover {
     transition: ease-in-out 3ms;
 }
 
-span {
-    background-color: #5b4a3f;
+/*span de produto adicionado ao carrinho*/
+
+span{
+    font-size: 16px;
+}
+
+.adicionado{
+    background-color: #DFF5E5;
 }
