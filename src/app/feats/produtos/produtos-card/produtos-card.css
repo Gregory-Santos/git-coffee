@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .imgcard {
     width: 100%;
     height: 180px; 
