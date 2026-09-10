@@ -6,10 +6,12 @@ import { Sobre } from './feats/sobre/sobre';
 import { Login } from './feats/login/login';
 import { ProdutosFiltros } from './feats/produtos/produtos-filtros/produtos-filtros';
 import { Categorias } from './feats/categorias/categorias';
+import { DetalhesProdutos } from './feats/produtos/detalhes-produtos/detalhes-produtos';
 
 export const routes: Routes = [
 
     {path: 'home', component: Home},
+    {path: 'produtos/:id', component: DetalhesProdutos},
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'categorias', component: Categorias},
     {path: 'carrinho', component: Carrinho},

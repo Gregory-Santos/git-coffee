@@ -1,0 +1,11 @@
+@if (produto) {
+  <div class="detalhes-produto">
+    <img [src]="produto.img" [alt]="produto.nome">
+
+    <div class="informacoes">
+      <h1>{{ produto.nome }}</h1>
+      <span>R$ {{ produto.preco }}</span>
+      <p>{{ produto.descricao }}</p>
+    </div>
+  </div>
+}
