@@ -4,4 +4,6 @@ export interface Produto {
     descricao:string
     preco:number,
     img:string
+    
+   
 }

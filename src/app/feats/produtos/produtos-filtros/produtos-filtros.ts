@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -8,33 +10,69 @@ import { Component } from '@angular/core';
 })
 export class ProdutosFiltros {
 
-  // Controla se o painel de filtros está aberto
+  // Lê os parâmetros atuais da URL
+  private route = inject(ActivatedRoute);
+
+  // Permite alterar a URL
+  private router = inject(Router);
+
+  // Controla abertura do painel
   filtrosAbertos = false;
 
   filtros = {
-   
     categoria: '',
     ordenacao: '',
   };
 
-  // Abre ou fecha os filtros
+  constructor() {
+
+    // Observa os parâmetros da URL
+    this.route.queryParams.subscribe(queryParams => {
+
+      // Pega a categoria da URL
+      this.filtros.categoria = queryParams['categoria'] || '';
+
+      // Pega a ordenação da URL
+      this.filtros.ordenacao = queryParams['ordenacao'] || '';
+
+      console.log('Categoria selecionada:', this.filtros.categoria);
+      console.log('Ordenação:', this.filtros.ordenacao);
+    });
+  }
+
   abrirFiltros() {
     this.filtrosAbertos = !this.filtrosAbertos;
   }
 
-  
-
   aplicarFiltros() {
-    console.log('Filtros aplicados:');
-    console.log(this.filtros);
 
-    // Fecha o painel depois de aplicar
+    // Coloca os filtros na URL
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        categoria: this.filtros.categoria || null,
+        ordenacao: this.filtros.ordenacao || null
+      },
+      queryParamsHandling: 'merge'
+    });
+
+    // Fecha o painel
     this.filtrosAbertos = false;
   }
 
   limparFiltros() {
+
+    // Limpa os filtros
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        categoria: null,
+        ordenacao: null
+      },
+      queryParamsHandling: 'merge'
+    });
+
     this.filtros = {
-      
       categoria: '',
       ordenacao: ''
     };
@@ -42,3 +80,4 @@ export class ProdutosFiltros {
     console.log('Filtros limpos');
   }
 }
+
