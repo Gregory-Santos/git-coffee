@@ -12,4 +12,7 @@
   --cor-texto-cinza: #7D7B7A;
   --border-radius: 13px;
   --fonte-principal:'instrument-sans', sans-serif;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
 }
+

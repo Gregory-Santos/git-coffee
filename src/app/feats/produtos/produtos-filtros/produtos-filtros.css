@@ -9,7 +9,8 @@
 
     /* Espaçamento interno */
   
-    margin-bottom: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
 
     /* Permite posicionar o botão à direita */
     display: flex;
@@ -25,6 +26,9 @@
 
     /* Mantém o tamanho correto */
     box-sizing: border-box;
+
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
     
    
 }
