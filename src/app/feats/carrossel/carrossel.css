@@ -1,63 +1,214 @@
-/* Container principal do carrossel em formato de "Card" */
-.custom-coffee-carousel {
+.carrossel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 16px;
+  box-sizing: border-box;
+}
+
+.cartao-produto {
   position: relative;
-  width: 800px;
-  height: 380px;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0.2, 0, 0.05);
-  margin: 50px auto;
+  width: 100%;
+  max-width: 900px;
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: var(--cor-texto-claro);
+  border-radius: 50px;
   overflow: hidden;
+  font-family: var(--fonte-principal);
+  box-sizing: border-box;
 }
 
-/* Garante que o item interno preencha a altura do carrossel */
-.carousel-item {
-  height: 380px;
+.informacoes-produto {
+  width: 100%;
+  padding: clamp(30px, 5vw, 45px) clamp(30px, 8vw, 95px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
-/* Estilização da imagem do produto */
-.product-img {
-  max-height: 280px;
+.categoria {
+  margin-bottom: 20px;
+  color: var(--cor-texto-cinza);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.informacoes-produto h2 {
+  margin: 0 0 8px;
+  color: var(--cor-texto-escuro);
+  font-size: clamp(21px, 3vw, 25px);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.preco {
+  margin-bottom: 22px;
+  color: var(--cor-texto-cinza);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.informacoes-produto p {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 0 18px;
+  color: var(--cor-texto-cinza);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.botao-adicionar {
+  width: 190px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--cor-botão);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-principal);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botao-adicionar:hover {
+  background-color: var(--cor-botão-hover);
+}
+
+.icone-carrinho {
+  font-size: 17px;
+}
+
+.imagem-produto {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.imagem-produto img {
+  width: 100%;
+  max-width: 340px;
+  height: 330px;
   object-fit: contain;
-  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
+  display: block;
 }
 
-/* Botão de adicionar personalizado (tom marrom/café) */
-.btn-custom-buy {
-  background-color: #6c584c !important;
-  border-color: #6c584c !important;
-  color: #fff !important;
+.imagem-produto:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
-.btn-custom-buy:hover {
-  background-color: #58463c !important;
+.seta {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--cor-texto-cinza);
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 3;
 }
 
-/* Ajuste do tamanho do texto descritivo */
-.description-text {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  max-width: 320px;
+.seta:hover {
+  color: var(--cor-botão-hover);
 }
 
-/* Posicionamento dos indicadores na parte inferior central */
-.carousel-indicators {
-  margin-bottom: 15px;
+.seta-esquerda {
+  left: 52%;
 }
 
-.carousel-indicators [data-bs-target] {
+.seta-direita {
+  right: 35px;
+}
+
+.indicadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.indicadores button {
   width: 8px;
   height: 8px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
-  background-color: #333;
+  background-color: var(--cor-texto-cinza);
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-/* --- CORREÇÃO DEFINITIVA DAS SETAS DO CARROSSEL --- */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 35px !important;       /* Largura fixa pequena para não invadir o texto */
-  height: 35px !important;      /* Altura fixa */
-  top: 50% !important;          /* Centralizado verticalmente */
-  transform: translateY(-50%);  /* Ajuste fino do centro */
+.indicadores button.ativo {
+  width: 9px;
+  height: 9px;
+  background-color: var(--cor-texto-escuro);
+  opacity: 1;
 }
 
+@media (max-width: 700px) {
+  .cartao-produto {
+    min-height: 430px;
+    grid-template-columns: 1fr;
+    border-radius: 35px;
+  }
+
+  .informacoes-produto {
+    padding: 30px 35px 10px;
+  }
+
+  .informacoes-produto p {
+    max-width: 100%;
+  }
+
+  .imagem-produto {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imagem-produto img {
+    width: 80%;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .seta-esquerda {
+    left: 15px;
+    top: 70%;
+  }
+
+  .seta-direita {
+    right: 15px;
+    top: 70%;
+  }
+}
