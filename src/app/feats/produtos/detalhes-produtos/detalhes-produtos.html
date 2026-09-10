@@ -1,11 +1,30 @@
 @if (produto) {
   <div class="detalhes-produto">
-    <img [src]="produto.img" [alt]="produto.nome">
+    <div class="imagem-detalhes">
+      <img [src]="produto.img" [alt]="produto.nome">
+    </div>
 
     <div class="informacoes">
       <h1>{{ produto.nome }}</h1>
       <span>R$ {{ produto.preco }}</span>
       <p>{{ produto.descricao }}</p>
+
+    <div class="acoes">
+      <div class="observacao">
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+      </div>
+      <div class="adiciona-botao">
+      <button>Adicionar ao Carrinho</button>
+      </div>
     </div>
+    </div>
+  </div>
+
+  <div class="vitrine">
+  <app-produtos></app-produtos>
   </div>
 }

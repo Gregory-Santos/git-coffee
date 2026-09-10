@@ -1,0 +1,109 @@
+:root {
+  --cor-fundo: #f0ebe3;
+  --cor-fundo-escuro:#463830;
+  --cor-elementos:#ffffff;
+  --cor-elementos2:#F3EFE9;
+  --cor-elementos3:#100f0e;
+  --cor-botao: #897A70;
+  --cor-botao-hover: #5B4A3F;
+  --cor-botao-hover-claro: #F9F7F5;
+  --cor-texto-claro: #F9F7F5;
+  --cor-texto-escuro: #100f0e;
+  --cor-texto-cinza: #7D7B7A;
+  --border-radius: 13px;
+  --fonte-principal:'instrument-sans', sans-serif;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+}
+
+.detalhes-produto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.imagem-detalhes img{
+    width: 300px;
+    height: 100%;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.informacoes h1{
+    font-size: 28px;
+    font-weight: 500px;
+    padding-top: 70px;
+}
+
+.informacoes span{
+    font-size: 28px;
+    font-weight: 500px;
+    color: var(--cor-texto-cinza);
+}
+
+.informacoes p{
+    font-size: 16px;
+    font-weight: 400px;
+    color: var(--cor-texto-escuro);
+}
+
+.adiciona-botao{
+    padding-top: 20px;
+}
+
+.adiciona-botao button {
+    border-radius: var(--border-radius);
+    padding: 6px 24px;
+    width: 100%;
+    border: none;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-claro);
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: auto; 
+}
+
+.adiciona-botao button:hover {
+    background-color: var(--cor-botao-hover);
+    transition: ease-in-out 3ms;
+}
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding-top: 40px;
+}
+
+.observacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 150px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.observacao button{
+    border-radius: 100%;
+    width: 24px;
+    height: 22px;
+    border: none;
+    background-color: #0a01012b;
+}
+
+.vitrine{
+padding-top: 80px;
+}
