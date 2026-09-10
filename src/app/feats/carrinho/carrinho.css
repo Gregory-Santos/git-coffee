@@ -3,7 +3,7 @@
     display: inline-block;
     vertical-align: top;
     width: 823px;
-    height: 862px;
+    height: auto;
     min-height: 800px;
     background-color: #F9F6F1;
     font-family: 'instrument-sans', sans-serif;
@@ -94,6 +94,7 @@ img {
     align-items: center;
     column-gap: 10px;
     flex: 1;
+    min-height: 159px;
 }
 
 .descricao h1 {
