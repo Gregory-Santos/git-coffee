@@ -13,8 +13,11 @@
 
         <button (click)="adicionarProduto()">Adicionar</button>
 
-        @if (adicionado()) {
-            <span>Produto adicionado ao carrinho</span>
-        }
     </div>
-</div>
+
+        <!-- Aviso adicionado -->
+@if (adicionado()) {
+    <div class="snackbar">
+        <span>✓ Produto adicionado ao carrinho</span>
+    </div>
+}

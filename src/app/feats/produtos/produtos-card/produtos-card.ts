@@ -1,6 +1,5 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { Produto } from '../models/produto';
-import { PRODUTOS_API } from '../models/produtos-api/produtos-api';
 import { CarrinhoService } from '../../carrinho/carrinho-service';
 
 @Component({
@@ -9,15 +8,21 @@ import { CarrinhoService } from '../../carrinho/carrinho-service';
   styleUrl: './produtos-card.css',
 })
 export class ProdutosCard {
- adicionado = signal(false);
-  
-  //injetando carrinho service//
-  constructor(private CarrinhoService: CarrinhoService) {}
+  adicionado = signal(false);
+
+  //injetando carrinho service
+  constructor(private carrinhoService: CarrinhoService) {}
+
   adicionarProduto() {
-    this.CarrinhoService.adicionarProduto(this.produto());
-    
-this.adicionado.set(true)
-   }
+    this.carrinhoService.adicionarProduto(this.produto());
+
+    this.adicionado.set(true);
+
+    // Oculta o Snack Bar após 2.5 segundos
+    setTimeout(() => {
+      this.adicionado.set(false);
+    }, 1500);
+  }
 
   produto = input.required<Produto>();
 }
