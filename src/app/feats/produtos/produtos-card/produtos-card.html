@@ -7,7 +7,7 @@
         <div class="card-info">
             <h2>{{ produto().nome }}</h2>
             <div class="valor">
-                <p>R$ {{ produto().preco }}</p>
+                <p>R$ {{ produto().preco.toFixed(2) }}</p>
             </div>
         </div>
 

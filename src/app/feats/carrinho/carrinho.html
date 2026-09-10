@@ -1,4 +1,4 @@
-<div class="container-carrinho">
+ <div class="container-carrinho">
     <div class="card-carrinho">
         <!--Imagem de produto titulo, linha hr-->
         <div class="espaco-topo">
@@ -11,7 +11,7 @@
         @for (item of CarrinhoService.carrinho(); track item.produto.id) {
         <div class="produto">
             <div class="imagem-produto">
-                <img [src]="item.produto" alt="item.produto.nome" />
+                <img [src]="item.produto.img" alt="item.produto.nome" />
             </div>
 
             <!--Titulo, descrição e botão de excluir produto-->
@@ -73,7 +73,18 @@
         
 
             <!--botão de finalizar compra-->
-            <button class="finalizar-compra">Finalizar compra</button>
+            <button (click)="CarrinhoService.compraFinalizada()" class="finalizar-compra">Finalizar compra</button>
+            
+            
         </div>
+
+        @if (CarrinhoService.alertaFinalizado) {
+                <div class="compra-finalizada">
+            <p>Compra finalizada <i class="fa-regular fa-circle-check"></i></p><!--mensagem de compra finalizada-->
+        </div>
+            }
+        
+        
+        
     </div>
 </div>
