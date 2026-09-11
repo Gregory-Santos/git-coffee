@@ -54,7 +54,7 @@
 }
 
 .informacoes p{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400px;
     color: var(--cor-texto-escuro);
 }
@@ -88,7 +88,7 @@
     justify-content: center;
     align-items: center;
     gap: 18px;
-    padding-top: 40px;
+    padding-top: 14px;
 }
 
 .observacao {
