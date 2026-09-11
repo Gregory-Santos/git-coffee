@@ -10,17 +10,27 @@
 
     <div class="informacoes">
       <h1>{{ produto.nome }}</h1>
-      <span>R$ {{ produto.preco }}</span>
+      <span>R$ {{ produto.preco | number:'1.2-2' }}</span>
       <p>{{ produto.descricao }}</p>
 
     <div class="acoes">
-      <div class="observacao">
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      </div>
+    <div class="observacao">
+        <button class="sem-restricao" title="Sem lactose">
+            <i class="fa-solid fa-cow"></i>
+        </button>
+        <button class="sem-restricao" title="Sem açúcar">
+            <i class="fa-solid fa-cubes-stacked"></i>
+        </button>
+        <button class="sem-restricao" title="Sem glúten">
+            <i class="fa-solid fa-wheat-awn"></i>
+        </button>
+        <button class="sem-restricao" title="Descafeinado">
+            <i class="fa-solid fa-mug-hot"></i>
+        </button>
+        <button title="Leite vegetal">
+            <i class="fa-solid fa-seedling"></i>
+        </button>
+    </div>
       <div class="adiciona-botao">
       <button>Adicionar ao Carrinho</button>
       </div>

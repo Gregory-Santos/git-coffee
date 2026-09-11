@@ -5,12 +5,14 @@ import { PRODUTOS_API } from '../models/produtos-api/produtos-api';
 import { ActivatedRoute } from '@angular/router';
 import { Produtos } from "../produtos";
 import { Location } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
-  imports: [Produtos],
+  imports: [Produtos, DecimalPipe],
   selector: 'app-detalhes-produtos',
   styleUrl: './detalhes-produtos.css',
   templateUrl: './detalhes-produtos.html',
+  
 })
 export class DetalhesProdutos {
 
