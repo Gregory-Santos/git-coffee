@@ -18,7 +18,11 @@ export class ProdutosCard {
   adicionarProduto() {
     this.CarrinhoService.adicionarProduto(this.produto());
     
-this.adicionado.set(true)
+this.adicionado.set(true);
+
+setTimeout(() => {
+    this.adicionado.set(false);
+  }, 1500);
    }
 
   produto = input.required<Produto>();

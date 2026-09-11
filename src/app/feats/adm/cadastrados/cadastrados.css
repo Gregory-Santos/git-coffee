@@ -1,0 +1,118 @@
+
+.card-container {
+    background-color: var(--cor-elementos2);
+    width: 500px;
+    height: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.card-header {
+    background-color: var(--cor-elementos2);
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-botao);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--cor-texto-escuro);
+    font-weight: bold;
+}
+
+
+.products-list {
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+
+.products-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.products-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.products-list::-webkit-scrollbar-thumb {
+    background-color: var(--cor-botao); 
+    border-radius: 4px;
+}
+
+
+.product-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*Placeholder para imagem oficial*/
+.product-image {
+    width: 75px;
+    height: 75px;
+    background-color: var(--cor-texto-cinza);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+
+.product-info {
+    margin-left: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+}
+
+.product-desc {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--cor-texto-cinza);
+}
+
+.product-price {
+    margin: 4px 0 0 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+}
+
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75px;
+    align-items: flex-end;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--cor-texto-cinza);
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--cor-texto-escuro);
+}
