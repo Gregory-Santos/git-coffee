@@ -1,3 +1,22 @@
+:root {
+  --cor-fundo: #f0ebe3;
+  --cor-fundo-escuro:#463830;
+  --cor-elementos:#ffffff;
+  --cor-elementos2:#F3EFE9;
+  --cor-elementos3:#100f0e;
+  --cor-botao: #897A70;
+  --cor-botao-hover: #5B4A3F;
+  --cor-botao-hover-claro: #F9F7F5;
+  --cor-texto-claro: #F9F7F5;
+  --cor-texto-escuro: #100f0e;
+  --cor-texto-cinza: #7D7B7A;
+  --border-radius: 13px;
+  --fonte-principal:'instrument-sans', sans-serif;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+}
+
+
 .carrossel {
   width: 100%;
   display: flex;
@@ -66,23 +85,24 @@
 
 .botao-adicionar {
   width: 190px;
-  height: 42px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 3px;
   gap: 12px;
   border: none;
   border-radius: var(--border-radius);
-  background-color: var(--cor-botão);
+  background-color: var(--cor-botao);
   color: var(--cor-texto-claro);
   font-family: var(--fonte-principal);
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .botao-adicionar:hover {
-  background-color: var(--cor-botão-hover);
+  background-color: var(--cor-botao-hover);
 }
 
 .icone-carrinho {
