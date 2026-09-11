@@ -4,6 +4,7 @@ import { Produto } from '../models/produto';
 import { PRODUTOS_API } from '../models/produtos-api/produtos-api';
 import { ActivatedRoute } from '@angular/router';
 import { Produtos } from "../produtos";
+import { Location } from '@angular/common';
 
 @Component({
   imports: [Produtos],
@@ -13,6 +14,7 @@ import { Produtos } from "../produtos";
 })
 export class DetalhesProdutos {
 
+  private readonly location = inject(Location);
   private readonly route = inject(ActivatedRoute);
   private readonly scroller = inject(ViewportScroller);
 
@@ -25,8 +27,12 @@ export class DetalhesProdutos {
       this.produto = PRODUTOS_API.find(
         produto => produto.id === Number(produtoId)
       );
+      
 
       this.scroller.scrollToPosition([0, 0]);
     });
+  }
+    voltar() {
+    this.location.back();
   }
 }
