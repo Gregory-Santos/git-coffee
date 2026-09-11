@@ -1,0 +1,101 @@
+
+.card-container {
+    background-color: var(--cor-elementos2); 
+    width: 500px;
+    height: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+
+.card-header {
+    background-color: var(--cor-elementos2); 
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-botao);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--cor-texto-escuro);
+    font-weight: bold;
+}
+
+
+.card-body {
+    padding: 24px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 8px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-elementos);
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+
+.form-group textarea {
+    resize: none; 
+}
+
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.btn-cancelar {
+    background-color: #9c9c9c;
+    color: #111;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--cor-texto-cinza);
+}
+
+
+.btn-cadastrar {
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-claro);
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--cor-fundo-escuro);
+}
