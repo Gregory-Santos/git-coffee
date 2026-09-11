@@ -50,7 +50,7 @@
     align-items: flex-start;
     gap: 10px;
     width: 662px;
-    height: 159px;
+    height: 169px;
     margin-left: 24px;
     border-bottom: 1px solid #685447F0;
     padding-bottom: 15px;
@@ -64,7 +64,7 @@
 /*Configuração img dos produtos*/
 
 img {
-    height: 155px;
+    height: 169px;
     width: 100%;
     object-fit: cover;
 }
@@ -111,7 +111,7 @@ img {
     margin: 0;
     font-family: 'instrument-sans', sans-serif;
     color: #4C4C4C;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 
 }
@@ -146,7 +146,7 @@ i {
     border: 1px solid #4C4C4C;
     border-radius: 13px;
     gap: 0px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .btn-quantidade {
