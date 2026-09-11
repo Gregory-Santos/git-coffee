@@ -80,5 +80,41 @@ export const PRODUTOS_API: Produto[] = [
   descricao: 'Ingredientes: Café espresso diluído em água quente. Uma opção clássica e simples de espresso com água quente [bebida-quente].',
   preco: 19.90,
   img: 'img/cafe-americano.png'
+},
+
+{
+  id: 11,
+  nome: 'Brownie de Chocolate',
+  descricao: 'Ingredientes: Chocolate, farinha de trigo, açúcar, ovos e manteiga. Brownie de chocolate com massa densa e cobertura de chocolate [sobremesa].',
+  preco: 18.90,
+  img: 'img/brownie.png'
+},
+{
+  id: 12,
+  nome: 'Cheesecake',
+  descricao: 'Ingredientes: Cream cheese, açúcar, ovos, biscoito e manteiga. Cheesecake clássico com base crocante e creme de queijo [sobremesa].',
+  preco: 24.90,
+  img: 'img/cheesecake.png'
+},
+{
+  id: 13,
+  nome: 'Cheesecake de Pistache',
+  descricao: 'Ingredientes: Cream cheese, pistache, açúcar, ovos, biscoito e manteiga. Cheesecake com creme de pistache e base crocante [sobremesa].',
+  preco: 26.90,
+  img: 'img/cheesecake-pistache.png'
+},
+{
+  id: 14,
+  nome: 'Cheesecake de Paçoca',
+  descricao: 'Ingredientes: Cream cheese, amendoim, açúcar, ovos, biscoito e manteiga. Cheesecake de paçoca com creme de amendoim e base crocante [sobremesa].',
+  preco: 25.90,
+  img: 'img/cheesecake-pacoca.png'
+},
+{
+  id: 15,
+  nome: 'Red Velvet',
+  descricao: 'Ingredientes: Farinha de trigo, cacau, açúcar, ovos, manteiga e cream cheese. Bolo red velvet com camadas de massa e cobertura cremosa [sobremesa].',
+  preco: 24.90,
+  img: 'img/red-velvet.png'
 }
 ];
