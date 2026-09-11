@@ -56,7 +56,7 @@
 .informacoes p{
     font-size: 14px;
     font-weight: 400px;
-    color: var(--cor-texto-escuro);
+    color: var(--cor-texto-cinza);
 }
 
 .adiciona-botao{
@@ -102,10 +102,48 @@
 
 .observacao button{
     border-radius: 100%;
-    width: 24px;
-    height: 22px;
+    width: 28px;
+    height: 26px;
     border: none;
     background-color: #0a01012b;
+}
+
+.acoes i {
+    display: flex;
+    justify-content: center;
+    color: var(--cor-botao-hover);
+}
+
+.sem-restricao i {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.sem-restricao i::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--cor-botao-hover);
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64504483;
+}
+
+.observacao button:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.observacao button {
+    border: 2px solid transparent;
+}
+
+.observacao button:focus {
+    border-color: var(--cor-botao-hover);
 }
 
 .vitrine{
