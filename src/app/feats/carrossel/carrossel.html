@@ -6,14 +6,14 @@
       <h2>{{ produto.nome }}</h2>
       <span class="preco">R$ {{ produto.preco}}</span>
       <p>{{ produto.descricao }}</p>
-      <button class="botao-adicionar" (click)="adicionar(produto)">
+      <button class="botao-adicionar" (click)="adicionar($any(produto))">
         <span>Adicionar</span>
         <i class="fa-solid fa-cart-shopping"></i>
       </button>
     </div>
     
     <div class="imagem-produto">
-      <img [src]="produto.imagem" [alt]="produto.nome">
+      <img [src]="produto.img" [alt]="produto.nome">
     </div>
 
     <button class="seta seta-esquerda" (click)="anterior()" aria-label="Produto anterior">‹</button>

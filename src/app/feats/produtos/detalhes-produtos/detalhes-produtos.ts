@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Produtos } from "../produtos";
 import { Location } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
+import { CarrinhoService } from '../../carrinho/carrinho-service';
 
 @Component({
   imports: [Produtos, DecimalPipe],
@@ -19,7 +20,8 @@ export class DetalhesProdutos {
   private readonly location = inject(Location);
   private readonly route = inject(ActivatedRoute);
   private readonly scroller = inject(ViewportScroller);
-
+  private readonly CarrinhoService= inject (CarrinhoService);
+  
   protected produto: Produto | undefined;
 
   constructor() {
@@ -36,5 +38,9 @@ export class DetalhesProdutos {
   }
     voltar() {
     this.location.back();
+  }
+
+  adicionar(produto: Produto) {
+    this.CarrinhoService.adicionarProduto(produto);
   }
 }
