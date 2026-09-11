@@ -6,23 +6,39 @@
 
         <form (ngSubmit)="loginDemo()">
 
-            <div class="field">
-                <label for="email">Email</label>
+    <div class="field">
+        <label for="email">Email</label>
 
-                <input id="email" type="text" [(ngModel)]="email" name="email" autocomplete="off" />
-            </div>
+        <input
+            id="email"
+            type="text"
+            [(ngModel)]="email"
+            name="email"
+            autocomplete="off"
+        />
+    </div>
 
-            <div class="field">
-                <label for="senha">Senha</label>
+    <div class="field">
+        <label for="senha">Senha</label>
 
-                <input id="senha" type="password" [(ngModel)]="senha" name="senha" autocomplete="off" />
-            </div>
+        <input
+            id="senha"
+            type="password"
+            [(ngModel)]="senha"
+            name="senha"
+            autocomplete="off"
+        />
+    </div>
 
-            <button class="login-button" type="submit">
-                Login
-            </button>
+    <button class="login-button" type="submit">
+        Login
+    </button>
 
-        </form>
+</form>
+
+@if (mensagem) {
+    <p class="mensagem">{{ mensagem }}</p>
+}
 
         <button class="forgot-password">
             Esqueceu a senha?

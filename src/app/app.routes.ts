@@ -7,6 +7,7 @@ import { Login } from './feats/login/login';
 import { ProdutosFiltros } from './feats/produtos/produtos-filtros/produtos-filtros';
 import { Categorias } from './feats/categorias/categorias';
 import { DetalhesProdutos } from './feats/produtos/detalhes-produtos/detalhes-produtos';
+import { Administrador } from './feats/login/administrador/administrador';
 
 export const routes: Routes = [
 
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'produtos', component: Produtos},
     {path: 'sobre', component: Sobre},
     {path: 'login', component: Login},
-    {path: 'produtos-filtros', component: ProdutosFiltros}
+    {path: 'produtos-filtros', component: ProdutosFiltros},
+    {path: 'administrador', component: Administrador}
 ];
