@@ -99,7 +99,7 @@ export const PRODUTOS_API: Produto[] = [
 {
   id: 13,
   nome: 'Cheesecake de Pistache',
-  descricao: 'Ingredientes: Cream cheese, pistache, açúcar, ovos, biscoito e manteiga. Cheesecake com creme de pistache e base crocante [sobremesa].',
+  descricao: 'Ingredientes: Cream cheese, pistache, açúcar, ovos, biscoito e manteiga. Cheesecake com creme de pistache e base crocante amanteigada [sobremesa].',
   preco: 26.90,
   img: 'img/cheesecake-pistache.png'
 },
