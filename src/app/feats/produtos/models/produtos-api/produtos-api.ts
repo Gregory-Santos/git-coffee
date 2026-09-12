@@ -120,21 +120,21 @@ export const PRODUTOS_API: Produto[] = [
 {
   id: 16,
   nome: 'Café em Grãos - Torra Clara de Caramelo',
-  descricao: 'Ingredientes: Café em grãos 100% arábica, torra clara. Café em grãos com torra clara de caramelo, embalagem de 500g [graos].',
+  descricao: 'Ingredientes: Café em grãos, torra clara. Café em grãos com torra clara trufado de caramelo, embalagem de 500g [graos].',
   preco: 46.90,
   img: 'img/torra-clara-caramelo.png'
 },
 {
   id: 17,
   nome: 'Café em Grãos - Torra Média Original',
-  descricao: 'Ingredientes: Café em grãos 100% arábica, torra média. Café em grãos com torra média original, embalagem de 500g [graos].',
+  descricao: 'Ingredientes: Café em grãos, torra média. Café em grãos com torra média sabor tradicional, embalagem de 500g [graos].',
   preco: 46.90,
   img: 'img/torra-media-original.png'
 },
 {
   id: 18,
   nome: 'Café em Grãos - Torra Média Frutado',
-  descricao: 'Ingredientes: Café em grãos 100% arábica, torra média. Café em grãos com perfil frutado de frutas vermelhas, embalagem de 500g [graos].',
+  descricao: 'Ingredientes: Café em grãos, torra média. Café em grãos com perfil frutado de frutas vermelhas, embalagem de 500g [graos].',
   preco: 46.90,
   img: 'img/torra-media-frutado.png'
 }
