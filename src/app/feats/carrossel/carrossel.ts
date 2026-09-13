@@ -3,11 +3,10 @@ import { Produto } from '../produtos/models/produto';
 import { PRODUTOS_API } from '../produtos/models/produtos-api/produtos-api';
 import { CarrinhoService } from '../carrinho/carrinho-service';
 import { DecimalPipe } from '@angular/common';
-import { Produtos } from '../produtos/produtos';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [Produtos, DecimalPipe, RouterLink],
+  imports: [DecimalPipe, RouterLink],
   selector: 'app-carrossel',
   styleUrl: './carrossel.css',
   templateUrl: './carrossel.html',
