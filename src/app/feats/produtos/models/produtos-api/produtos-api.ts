@@ -5,7 +5,7 @@ export const PRODUTOS_API: Produto[] = [
   {
   id: 1,
   nome: 'Strawberry Matcha Latte Gelado',
-  descricao: 'Ingredientes: Chá verde matcha, purê de morango natural, leite, gelo e pedaços de morango. Uma combinação de matcha e morango com leite, servida bem gelada [bebida-gelada].',
+  descricao: 'Ingredientes: Chá verde matcha, purê de morango natural, leite, gelo e pedaços de morango. Uma combinação de matcha e morango com leite, servida bem gelada [bebida-gelada] [bebida-especial].',
   preco: 28.90,
   img: 'img/strawberry-matcha-latte-gelado.png'
 },
@@ -13,7 +13,7 @@ export const PRODUTOS_API: Produto[] = [
 {
   id: 2,
   nome: 'Pink Drink de Morango',
-  descricao: 'Ingredientes: Leite vegetal, calda e purê de morango, chantilly e pedaços de morango. Uma combinação cremosa de morango e leite vegetal, finalizada com chantilly [bebida-gelada].',
+  descricao: 'Ingredientes: Leite vegetal, calda e purê de morango, chantilly e pedaços de morango. Uma combinação cremosa de morango e leite vegetal, finalizada com chantilly [bebida-gelada] [bebida-especial].',
   preco: 26.90,
   img: 'img/pink-drink-de-morango.png'
 },

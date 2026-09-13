@@ -7,7 +7,19 @@
     <nav class="navegacao">
         <a routerLink="/home" routerLinkActive="pagina-ativa">home</a>
         <a routerLink="/produtos" routerLinkActive="pagina-ativa">produtos</a>
-        <a routerLink="/" routerLinkActive="pagina-ativa">categoria</a>
+        <div class="categoria-menu">
+
+            <div class="categoria-menu">
+                <a routerLink="/produtos" routerLinkActive="pagina-ativa">categoria</a>
+                <div class="categorias">
+                    <a href="/produtos?categoria=bebida-quente">Bebidas Quentes</a>
+                    <a href="/produtos?categoria=bebida-gelada">Bebidas Geladas</a>
+                    <a href="/produtos?categoria=bebida-especial">Bebidas Especiais</a>
+                    <a href="/produtos?categoria=sobremesa">Sobremesas</a>
+                    <a href="/produtos?categoria=graos">Grãos de Café</a>
+                </div>
+            </div>
+        </div>
         <a routerLink="/sobre" routerLinkActive="pagina-ativa">sobre</a>
         <a routerLink="/adm" routerLinkActive="pagina-ativa">Administrador</a>
     </nav>
@@ -24,11 +36,12 @@
             <i class="fa-regular fa-user"></i>
         </a>
         <div class="carrinho-icon">
-        <a routerLink="/carrinho" routerLinkActive="pagina-ativa">
-            <i class="fa-solid fa-cart-shopping"></i>
-            @if (CarrinhoService.contador() > 0 ) {
-            <span class="badge" >{{ CarrinhoService.contador() }}</span>}
-        </a></div>
+            <a routerLink="/carrinho" routerLinkActive="pagina-ativa">
+                <i class="fa-solid fa-cart-shopping"></i>
+                @if (CarrinhoService.contador() > 0 ) {
+                <span class="badge">{{ CarrinhoService.contador() }}</span>}
+            </a>
+        </div>
     </nav>
 
 </div>
