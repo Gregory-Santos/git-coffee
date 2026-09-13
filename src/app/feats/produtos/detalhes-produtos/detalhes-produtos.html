@@ -40,5 +40,11 @@
 
   <div class="vitrine">
   <app-produtos></app-produtos>
+   
+  @if (adicionado()) {
+  <div class="snackbar">
+    Produto adicionado ao carrinho
+  </div>
+}
   </div>
 }

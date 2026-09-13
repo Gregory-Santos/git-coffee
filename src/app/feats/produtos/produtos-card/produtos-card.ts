@@ -13,8 +13,8 @@ import { RouterLink } from "@angular/router";
 export class ProdutosCard {
  adicionado = signal(false);
   
-  //injetando carrinho service//
   constructor(private CarrinhoService: CarrinhoService) {}
+  
   adicionarProduto() {
     this.CarrinhoService.adicionarProduto(this.produto());
     
