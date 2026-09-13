@@ -1,9 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Produto } from '../produtos/models/produto';
+import { PRODUTOS_API } from '../produtos/models/produtos-api/produtos-api';
 import { CarrinhoService } from '../carrinho/carrinho-service';
+import { DecimalPipe } from '@angular/common';
+import { Produtos } from '../produtos/produtos';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [Produtos, DecimalPipe, RouterLink],
   selector: 'app-carrossel',
   styleUrl: './carrossel.css',
   templateUrl: './carrossel.html',
@@ -13,26 +17,13 @@ export class Carrossel {
   //injeta service para função adicionar produto do carrossel no carrinho//
   protected CarrinhoService = inject(CarrinhoService);
 
+  adicionado = signal(false);
 
-  produtos = [
-    {
-      categoria: 'Favoritos',
-      nome: 'Matcha Latte Gelado',
-      preco: 24.90,
-      descricao: 'Uma bebida refrescante, cremosa e cheia de energia que combina chá verde em pó com leite frio e gelo.',
-      img: 'img/iced-matcha-latte-classico.png'
-    },
-    {
-      categoria: 'Favoritos',
-      nome: 'Café Gelado',
-      preco: 19.90,
-      descricao: 'Uma bebida clássica adaptada para o verão brasileiro.',
-      img: 'img/iced-americano.png'
-    }
-  ];
+  produtos = PRODUTOS_API.filter(produto =>
+    [7, 3, 6].includes(produto.id)
+  );
 
   indiceAtual = 0;
-
   produto = this.produtos[this.indiceAtual];
 
   anterior() {
@@ -52,7 +43,18 @@ export class Carrossel {
 
   adicionar(produto: Produto) {
     this.CarrinhoService.adicionarProduto(produto);
+
+    this.adicionado.set(true);
+
+    setTimeout(() => {
+      this.adicionado.set(false);
+    }, 1500);
   }
 
+  limitarDescricao(descricao: string) {
+    return descricao.length > 90
+      ? descricao.slice(0, 90) + '...'
+      : descricao;
+  }
 
 }
