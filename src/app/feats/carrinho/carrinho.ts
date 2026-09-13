@@ -11,4 +11,8 @@ import { Produtos } from '../produtos/produtos';
 export class Carrinho {
 
   protected readonly CarrinhoService = inject(CarrinhoService);
+
+  fecharPopup() {
+    this.CarrinhoService.alertaFinalizado = false;
+}
 }

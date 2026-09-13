@@ -294,3 +294,39 @@ i {
     color: #31572c;
     font-weight: 600;
 }
+
+/*Popup de compra finalizada*/
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.compra-finalizada {
+    width: 400px;
+    flex-direction: column;
+    height: 160px;
+    padding: 35px;
+    background: white;
+    border-radius: 13px;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.compra-finalizada p {
+    margin: 0 0 25px;
+    font-size: 20px;
+}
+
+.compra-finalizada button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+}
