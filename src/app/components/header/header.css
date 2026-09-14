@@ -9,6 +9,10 @@
     background-color: var(--cor-fundo);
     border-bottom: 1px solid var(--cor-elementos3);
     font-family: var(--fonte-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Pra evitar que alguma coisa fique na frente do header fixo */
 }
 
 /* LOGO */
