@@ -1,64 +1,48 @@
 import { Component } from '@angular/core';
-import { Administrador } from './administrador/administrador';
-
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-
-  // Componentes filhos que serão usados no HTML
-  imports: [Administrador],
+  imports: [FormsModule],
   templateUrl: './login.html',
-  styleUrl: './login.css',
+  styleUrl: './login.css'
 })
 export class Login {
 
-  // Guarda o tipo de usuário que fez login
-  tipoUsuario = '';
+  email = '';
+  senha = '';
 
-  // Guarda a mensagem de erro
   mensagem = '';
 
+  // Injeta o Router no componente
+  constructor(private router: Router) {}
 
-  // Função responsável pelo login
-  login(email: string, senha: string): void {
+  loginDemo() {
 
-    // Limpa mensagem de erro
-    this.mensagem = '';
+    // Login e senha do administrador
+    const loginAdministrador = 'admin';
+    const senhaAdministrador = '1234';
 
-
-    // Verifica se é administrador
+    // Verifica os dados
     if (
-      email === 'admin@email.com' &&
-      senha === '1234'
+      this.email === loginAdministrador &&
+      this.senha === senhaAdministrador
     ) {
 
-      this.tipoUsuario = 'admin';
+      this.mensagem = 'Login realizado com sucesso!';
 
-      return;
+      // Vai para a página do administrador
+      this.router.navigate(['/administrador']);
+
+    } else {
+
+      this.mensagem = 'Login ou senha incorretos!';
+
     }
-
-
-    // Verifica se é usuário comum
-    if (
-      email === 'usuario@email.com' &&
-      senha === '1234'
-    ) {
-
-      this.tipoUsuario = 'usuario';
-
-      return;
-    }
-
-
-    // Se não encontrou nenhum usuário
-    this.mensagem = 'Email ou senha incorretos.';
   }
 
-
-  // Volta para a tela de login
-  sair(): void {
-
-    this.tipoUsuario = '';
-
+  cadastroDemo() {
+    console.log('Abrir tela de cadastro');
   }
 }

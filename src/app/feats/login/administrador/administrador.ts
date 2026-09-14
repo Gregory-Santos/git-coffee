@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-administrador',
-  imports: [],
-  templateUrl: './administrador.html',
-  styleUrl: './administrador.css',
+    imports: [],
+    selector: 'app-administrador',
+    styleUrl: './administrador.css',
+    templateUrl: './administrador.html',
 })
-export class Administrador {
-
-}
+export class Administrador {}
