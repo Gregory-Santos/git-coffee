@@ -1,13 +1,30 @@
 
+:root {
+  --cor-fundo: #f0ebe3;
+  --cor-fundo-escuro:#463830;
+  --cor-elementos:#ffffff;
+  --cor-elementos2:#F3EFE9;
+  --cor-elementos3:#100f0e;
+  --cor-botao: #897A70;
+  --cor-botao-hover: #5B4A3F;
+  --cor-botao-hover-claro: #F9F7F5;
+  --cor-texto-claro: #F9F7F5;
+  --cor-texto-escuro: #100f0e;
+  --cor-texto-cinza: #7D7B7A;
+  --border-radius: 13px;
+  --fonte-principal:'instrument-sans', sans-serif;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+}
+
 .card-container {
     background-color: var(--cor-elementos2); 
     width: 500px;
-    height: 600px;
+    height: 680px;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
-
 
 .card-header {
     background-color: var(--cor-elementos2); 
@@ -82,12 +99,14 @@
 
 
 .btn-cancelar {
-    background-color: #9c9c9c;
-    color: #111;
+    background-color: var(--cor-botao);
+    opacity: 60%;
+    color: var(--cor-texto-claro);
 }
 
 .btn-cancelar:hover {
-    background-color: var(--cor-texto-cinza);
+    background-color: var(--cor-botao);
+    opacity: 100%;
 }
 
 

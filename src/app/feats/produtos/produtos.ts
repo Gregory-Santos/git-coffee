@@ -1,7 +1,6 @@
 
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { ProdutosCard } from "./produtos-card/produtos-card";
 import { PRODUTOS_API } from './models/produtos-api/produtos-api';
 import { ProdutosFiltros } from "./produtos-filtros/produtos-filtros";

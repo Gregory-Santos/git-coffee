@@ -1,4 +1,13 @@
 <div class="container-pai">
-    <app-cadastrar></app-cadastrar>
-    <app-cadastrados></app-cadastrados>
+  <app-cadastrar
+    [produtoParaEditar]="produtoEmEdicao()"
+    (produtoCadastrado)="onProdutoCadastrado($event)"
+    (produtoAtualizado)="onProdutoAtualizado($event)">
+  </app-cadastrar>
+
+  <app-cadastrados
+    [produtos]="produtos()"
+    (produtoExcluido)="onProdutoExcluido($event)"
+    (produtoParaEditar)="onProdutoParaEditar($event)">
+  </app-cadastrados>
 </div>
