@@ -1,6 +1,5 @@
 <div class="header-component">
-    <div class="logo"
-    routerLink="/home">
+    <div class="logo" routerLink="/home">
         <img src="/img/logo.escura.png" alt="Logo do Git Coffee">
 
     </div>
@@ -8,10 +7,52 @@
     <nav class="navegacao">
         <a routerLink="/home" routerLinkActive="pagina-ativa">home</a>
         <a routerLink="/produtos" routerLinkActive="pagina-ativa">produtos</a>
-        <a routerLink="/" routerLinkActive="pagina-ativa">categoria</a>
+
+        <!-- link de categoria com submenu -->
+        <div class="dropdown">
+            <a class="category-link">categoria</a>
+            <div class="category-bar">
+                <a class="category" routerLink="/produtos" [queryParams]="{ categoria: 'bebida-gelada' }">
+                    <div class="category-image">
+                        <img src="/img/bebidas-geladas.png" alt="Bebidas geladas" />
+                    </div>
+                    <span>Bebidas geladas</span>
+                </a>
+
+                <a class="category" routerLink="/produtos" [queryParams]="{ categoria: 'bebida-quente' }">
+                    <div class="category-image">
+                        <img src="/img/bebidas-quentes.png" alt="Bebidas quentes" />
+                    </div>
+                    <span>Bebidas quentes</span>
+                </a>
+
+                <a class="category" routerLink="/produtos" [queryParams]="{ categoria: 'bebida-especial' }">
+                    <div class="category-image">
+                        <img src="/img/bebidas-especiais.png" alt="Bebidas especiais" />
+                    </div>
+                    <span>Bebidas especiais</span>
+                </a>
+
+                <a class="category" routerLink="/produtos" [queryParams]="{ categoria: 'sobremesa' }">
+                    <div class="category-image">
+                        <img src="/img/sobremesas.png" alt="Sobremesas" />
+                    </div>
+                    <span>Sobremesas</span>
+                </a>
+
+                <a class="category" routerLink="/produtos" [queryParams]="{ categoria: 'graos' }">
+                    <div class="category-image">
+                        <img src="/img/grao-cafe.png" alt="Grãos de café" />
+                    </div>
+                    <span>Grãos de café</span>
+                </a>
+            </div>
+        </div>
+
         <a routerLink="/sobre" routerLinkActive="pagina-ativa">sobre</a>
         <a routerLink="/adm" routerLinkActive="pagina-ativa">Administrador</a>
     </nav>
+
 
     <form (submit)="pesquisarProduto($event)">
         <input type="text" [formField]="pesquisaForm">
@@ -25,11 +66,12 @@
             <i class="fa-regular fa-user"></i>
         </a>
         <div class="carrinho-icon">
-        <a routerLink="/carrinho" routerLinkActive="pagina-ativa">
-            <i class="fa-solid fa-cart-shopping"></i>
-            @if (CarrinhoService.contador() > 0 ) {
-            <span class="badge" >{{ CarrinhoService.contador() }}</span>}
-        </a></div>
+            <a routerLink="/carrinho" routerLinkActive="pagina-ativa">
+                <i class="fa-solid fa-cart-shopping"></i>
+                @if (CarrinhoService.contador() > 0 ) {
+                <span class="badge">{{ CarrinhoService.contador() }}</span>}
+            </a>
+        </div>
     </nav>
 
 </div>
