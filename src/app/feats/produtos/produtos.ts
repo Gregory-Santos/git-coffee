@@ -1,5 +1,5 @@
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutosCard } from "./produtos-card/produtos-card";
 import { PRODUTOS_API } from './models/produtos-api/produtos-api';
@@ -27,6 +27,9 @@ export class Produtos {
       // Pega a categoria da URL
       const categoria = params['categoria'] || '';
 
+       // Pega o nome da URL
+      const nome = params['nome'] || '';
+
       // Pega a ordenação da URL
       const ordenacao = params['ordenacao'] || '';
 
@@ -46,6 +49,15 @@ export class Produtos {
 
       }
 
+       // ==========================
+      // FILTRO POR NOME (PESQUISA)
+      // ==========================
+      if (nome) {
+        const termo = nome.toLowerCase();
+        produtosFiltrados = produtosFiltrados.filter(produto =>
+          produto.nome.toLowerCase().includes(termo)
+        );
+      }
 
       // ==========================
       // ORDENAÇÃO POR PREÇO
@@ -80,11 +92,11 @@ export class Produtos {
 
       }
 
-
       // Atualiza os produtos mostrados na tela
       this.produtos = produtosFiltrados;
 
       console.log('Categoria:', categoria);
+      console.log('Nome (pesquisa):', nome);
       console.log('Ordenação:', ordenacao);
       console.log('Produtos:', this.produtos);
     });

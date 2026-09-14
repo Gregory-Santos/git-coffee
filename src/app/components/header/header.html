@@ -1,14 +1,12 @@
 <div class="header-component">
-    <div class="logo">
-        <img src="/img/logo.escura.png" alt="Logo do Git Coffee">
-
+    <div class="logo" routerLink="/home">
+        <img src="/img/logo.escura.png" alt="Logo do Git Coffee" />
     </div>
 
     <nav class="navegacao">
         <a routerLink="/home" routerLinkActive="pagina-ativa">home</a>
         <a routerLink="/produtos" routerLinkActive="pagina-ativa">produtos</a>
         <div class="categoria-menu">
-
             <div class="categoria-menu">
                 <a>categoria</a>
                 <div class="categorias">
@@ -25,7 +23,7 @@
     </nav>
 
     <form (submit)="pesquisarProduto($event)">
-        <input type="text" [formField]="pesquisaForm">
+        <input type="text" [formField]="pesquisaForm" />
         <button [disabled]="pesquisaForm().invalid()">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -38,10 +36,10 @@
         <div class="carrinho-icon">
             <a routerLink="/carrinho" routerLinkActive="pagina-ativa">
                 <i class="fa-solid fa-cart-shopping"></i>
-                @if (CarrinhoService.contador() > 0 ) {
-                <span class="badge">{{ CarrinhoService.contador() }}</span>}
+                @if (CarrinhoService.contador() > 0) {
+                    <span class="badge">{{ CarrinhoService.contador() }}</span>
+                }
             </a>
         </div>
     </nav>
-
 </div>

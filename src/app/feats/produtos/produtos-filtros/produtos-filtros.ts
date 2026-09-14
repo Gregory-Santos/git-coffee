@@ -21,6 +21,7 @@ export class ProdutosFiltros {
 
   filtros = {
     categoria: '',
+    nome: '',
     ordenacao: '',
   };
 
@@ -66,6 +67,7 @@ export class ProdutosFiltros {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: {
+        nome: null,
         categoria: null,
         ordenacao: null
       },
@@ -73,6 +75,7 @@ export class ProdutosFiltros {
     });
 
     this.filtros = {
+      nome: '',
       categoria: '',
       ordenacao: ''
     };

@@ -1,7 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
-import { RouterLink, RouterLinkActive } from "@angular/router";
+import { Router, RouterLink, RouterLinkActive } from "@angular/router";
 import { CarrinhoService } from '../../feats/carrinho/carrinho-service';
+import { ProdutosCard } from '../../feats/produtos/produtos-card/produtos-card';
 
 @Component({
   imports: [RouterLink, RouterLinkActive, FormField,],
@@ -13,15 +14,23 @@ export class Header {
 
   //conecta service do carrinho, para icone de numero quando adicona produto//
   protected readonly CarrinhoService = inject(CarrinhoService);
-
-  // protected readonly produtosService = inject(ProdutosService);
+  private readonly router = inject(Router);
 
   pesquisaModel = signal<string>("");
-
   pesquisaForm = form(this.pesquisaModel);
 
   pesquisarProduto(event: SubmitEvent) {
-    event.preventDefault()
+    event.preventDefault();
+
+    const termo = this.pesquisaModel().trim();
+    if (!termo) return;
+
+    this.router.navigate(['/produtos'], {
+      queryParams: { nome: termo }
+    })
+
+    this.pesquisaModel.set('');
+
 
   }
   
