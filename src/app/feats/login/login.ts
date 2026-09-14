@@ -33,7 +33,7 @@ export class Login {
       this.mensagem = 'Login realizado com sucesso!';
 
       // Vai para a página do administrador
-      this.router.navigate(['/administrador']);
+      this.router.navigate(['/adm']);
 
     } else {
 
