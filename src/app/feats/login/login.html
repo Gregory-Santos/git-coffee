@@ -1,61 +1,122 @@
 <main class="login-page">
 
+    @if (tipoUsuario === '') {
     <section class="login-card">
 
         <h1>Bem Vindo!</h1>
 
-        <form (ngSubmit)="loginDemo()">
+        <form>
 
             <div class="field">
-                <label for="email">Email</label>
 
-                <input id="email" type="text" [(ngModel)]="email" name="email" autocomplete="off" />
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                        id="email"
+                        type="email"
+                        #email
+                        autocomplete="off"
+                    >
+
             </div>
 
             <div class="field">
-                <label for="senha">Senha</label>
 
-                <input id="senha" type="password" [(ngModel)]="senha" name="senha" autocomplete="off" />
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input
+                    id="senha"
+                    type="password"
+                    #senha
+                    autocomplete="off"
+                >
+
             </div>
 
-            <button class="login-button" type="submit">
+            @if (mensagem) {
+                <p class="mensagem-erro">
+                    {{ mensagem }}
+                </p>
+            }
+        
+
+            <button
+                   class="login-button"
+                    type="button"
+                    (click)="login(email.value, senha.value)"
+            >
                 Login
             </button>
 
         </form>
+    
 
-        <button class="forgot-password">
+        <button
+            class="forgot-password"
+            type="button"
+        >
             Esqueceu a senha?
         </button>
 
         <div class="other-login">
+
             <span>Outras formas</span>
 
             <div class="social-buttons">
-                <a href="http://accounts.google.com" target="_blank">
-                    <button class="social google" type="button">
+
+                <a href="https://accounts.google.com" target="_blank">
+                    <button
+                        class="social google"
+                        type="button"
+                    >
                         G
-                    </button></a>
+                    </button>
+                </a>
+
                 <a href="https://www.linkedin.com/" target="_blank">
-                    <button class="social linkedin" type="button">
+                    <button
+                        class="social linkedin"
+                        type="button"
+                    >
                         in
-                    </button></a>
-                <a href="https://www.facebook.com/">
-                    <button class="social facebook" type="button">
+                    </button>
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <button
+                        class="social facebook"
+                        type="button"
+                    >
                         f
-                    </button></a>
+                    </button>
+                </a>
 
             </div>
+
         </div>
 
         <div class="separator">
             <span>Ou</span>
         </div>
 
-        <button class="register-button" type="button" (click)="cadastroDemo()">
+        <button
+            class="register-button"
+            type="button"
+            (click)='login(email.value, senha.value)'
+        >
             Cadastre-se!
         </button>
 
     </section>
+}
+
+    @if (tipoUsuario === 'admin') {
+
+        <app-administrador></app-administrador>
+    }
 
 </main>
