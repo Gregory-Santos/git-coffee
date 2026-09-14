@@ -1,5 +1,6 @@
 <div class="card-container">
     <div class="card">
+        <a [routerLink]="['/produtos', produto().id]">
         <div class="imgcard">
             <img [src]="produto().img" [alt]="produto().nome">
         </div>
@@ -10,11 +11,14 @@
                 <p>R$ {{ produto().preco.toFixed(2) }}</p>
             </div>
         </div>
+        </a>
 
         <button (click)="adicionarProduto()">Adicionar</button>
 
         @if (adicionado()) {
-            <span>Produto adicionado ao carrinho</span>
-        }
+  <div class="snackbar">
+    Produto adicionado ao carrinho
+  </div>
+}
     </div>
 </div>

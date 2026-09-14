@@ -1,0 +1,50 @@
+<button class="botao-voltar" (click)="voltar()">
+  <i class="fa-solid fa-arrow-left"></i>
+</button>
+
+@if (produto) {
+  <div class="detalhes-produto">
+    <div class="imagem-detalhes">
+      <img [src]="produto.img" [alt]="produto.nome">
+    </div>
+
+    <div class="informacoes">
+      <h1>{{ produto.nome }}</h1>
+      <span>R$ {{ produto.preco | number:'1.2-2' }}</span>
+      <p>{{ produto.descricao }}</p>
+
+    <div class="acoes">
+    <div class="observacao">
+        <button class="sem-restricao" title="Sem lactose">
+            <i class="fa-solid fa-cow"></i>
+        </button>
+        <button class="sem-restricao" title="Sem açúcar">
+            <i class="fa-solid fa-cubes-stacked"></i>
+        </button>
+        <button class="sem-restricao" title="Sem glúten">
+            <i class="fa-solid fa-wheat-awn"></i>
+        </button>
+        <button class="sem-restricao" title="Descafeinado">
+            <i class="fa-solid fa-mug-hot"></i>
+        </button>
+        <button title="Leite vegetal">
+            <i class="fa-solid fa-seedling"></i>
+        </button>
+    </div>
+      <div class="adiciona-botao" (click)="adicionar($any(produto))">
+      <button>Adicionar ao Carrinho</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="vitrine">
+  <app-produtos></app-produtos>
+   
+  @if (adicionado()) {
+  <div class="snackbar">
+    Produto adicionado ao carrinho
+  </div>
+}
+  </div>
+}

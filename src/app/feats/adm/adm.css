@@ -1,0 +1,16 @@
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    margin: 0;
+}
+
+
+.container-pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}

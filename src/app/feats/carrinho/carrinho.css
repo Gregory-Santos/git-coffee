@@ -3,7 +3,7 @@
     display: inline-block;
     vertical-align: top;
     width: 823px;
-    height: 862px;
+    height: auto;
     min-height: 800px;
     background-color: #F9F6F1;
     font-family: 'instrument-sans', sans-serif;
@@ -50,7 +50,7 @@
     align-items: flex-start;
     gap: 10px;
     width: 662px;
-    height: 159px;
+    height: 169px;
     margin-left: 24px;
     border-bottom: 1px solid #685447F0;
     padding-bottom: 15px;
@@ -64,7 +64,7 @@
 /*Configuração img dos produtos*/
 
 img {
-    height: 155px;
+    height: 169px;
     width: 100%;
     object-fit: cover;
 }
@@ -94,6 +94,7 @@ img {
     align-items: center;
     column-gap: 10px;
     flex: 1;
+    min-height: 159px;
 }
 
 .descricao h1 {
@@ -110,7 +111,7 @@ img {
     margin: 0;
     font-family: 'instrument-sans', sans-serif;
     color: #4C4C4C;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 
 }
@@ -145,7 +146,7 @@ i {
     border: 1px solid #4C4C4C;
     border-radius: 13px;
     gap: 0px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .btn-quantidade {
@@ -292,4 +293,40 @@ i {
 .compra-finalizada i {
     color: #31572c;
     font-weight: 600;
+}
+
+/*Popup de compra finalizada*/
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.compra-finalizada {
+    width: 400px;
+    flex-direction: column;
+    height: 160px;
+    padding: 35px;
+    background: white;
+    border-radius: 13px;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.compra-finalizada p {
+    margin: 0 0 25px;
+    font-size: 20px;
+}
+
+.compra-finalizada button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
 }

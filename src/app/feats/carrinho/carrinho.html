@@ -79,10 +79,17 @@
         </div>
 
         @if (CarrinhoService.alertaFinalizado) {
-                <div class="compra-finalizada">
-            <p>Compra finalizada <i class="fa-regular fa-circle-check"></i></p><!--mensagem de compra finalizada-->
+    <div class="overlay" (click)="fecharPopup()">
+        <div class="compra-finalizada" (click)="$event.stopPropagation()">
+            <p>
+                Compra finalizada
+                <i class="fa-regular fa-circle-check"></i>
+            </p>
+
+            <button (click)="fecharPopup()">OK</button>
         </div>
-            }
+    </div>
+}
         
         
         

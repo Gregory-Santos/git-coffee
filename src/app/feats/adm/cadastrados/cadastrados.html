@@ -1,0 +1,29 @@
+<div class="card-container">
+
+    <div class="card-header">
+        <h2>Produtos cadastrados</h2>
+    </div>
+
+    <div class="products-list">
+
+        <div class="product-item" *ngFor="let produto of produtos">
+            <div class="product-image">
+                <img [src]="produto.urlImagem" [alt]="produto.nome">
+            </div>
+            <div class="product-info">
+                <h3>{{ produto.nome }}</h3>
+                <p class="product-desc">{{ produto.descricao }}</p>
+                <p class="product-price">R$: {{ produto.preco.toFixed(2) }}</p>
+            </div>
+            <div class="product-actions">
+                <button class="icon-btn" title="Excluir" (click)="excluir(produto.id)">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+                <button class="icon-btn" title="Configurar" (click)="editar(produto)">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

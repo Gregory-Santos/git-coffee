@@ -1,167 +1,83 @@
-/* =========================================================
-   CONTAINER DOS FILTROS
-   ========================================================= */
+/*Container dos filtros*/
 
 .filtros-container {
-
-    /* Ocupa toda a largura disponível */
     width: 100%;
-
-    /* Espaçamento interno */
-  
-    padding-bottom: 15px;
-    padding-top: 25px;
-
-    /* Permite posicionar o botão à direita */
+    position: relative;
+    padding-bottom: 45px;
+    padding-top: 35px;
+    padding-right: 70px;
     display: flex;
-
-    /* Organiza o botão/painel verticalmente */
     flex-direction: column;
-
-    /* Alinha o conteúdo à direita */
     align-items: flex-end;
-
-    /* Espaço entre botão e painel */
     gap: 15px;
-
-    /* Mantém o tamanho correto */
     box-sizing: border-box;
-
     background-color: var(--cor-fundo);
     font-family: var(--fonte-principal);
-    
-   
 }
 
 
-/* =========================================================
-   BOTÃO FILTROS
-   ========================================================= */
+/*Botão de filtros*/
 
 .btn-filtros {
-
-    /* Espaçamento interno */
-    padding: 10px 5px;
-
-    /* Remove borda padrão */
+    padding: 8px 16px;
     border: none;
-
-    /* Arredondamento */
     border-radius: var(--border-radius);
-
-    /* Cor do botão */
     background-color: var(--cor-botao);
-
-    /* Cor do texto */
     color: var(--cor-texto-claro);
-
-    /* Fonte */
     font-family: var(--fonte-principal);
-
-    /* Tamanho */
     font-size: 15px;
-
-    /* Texto mais forte */
     font-weight: 600;
-
-    /* Mãozinha */
     cursor: pointer;
-
-    /* Transição */
     transition: 0.2s ease;
 }
 
 
-/* Quando passar o mouse */
 
 .btn-filtros:hover {
-
-    /* Muda a cor */
     background-color: var(--cor-botao-hover);
-
-    /* Sobe levemente */
     transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   PAINEL DOS FILTROS
-   ========================================================= */
-
 .filtros {
-
-    /* Largura disponível */
-    width: 100%;
-
-    /* Impede ultrapassar a tela */
+    width: 220px;
+    position: absolute;
+    top: 80px;
+    right: 70px;
+    z-index: 10;
     box-sizing: border-box;
-
-    /* Espaçamento interno */
     padding: 15px;
-
-    /* Layout horizontal */
     display: flex;
-
-    /* Alinha pela parte inferior */
     align-items: flex-end;
-
-    /* Centraliza */
     justify-content: center;
-
-    /* Espaço entre os filtros */
     gap: 29px;
-
-    /* Permite quebra de linha */
+    border-radius: var(--border-radius);
     flex-wrap: wrap;
-
-    /* Fundo */
-    background-color: var(--cor-botao-hover);
-
-   
-    /* Sombra */
+    background-color: var(--cor-botao);
     box-shadow: 0 8px 20px rgba(16, 15, 14, 0.12);
-
-    /* Animação */
     animation: abrirFiltros 0.2s ease;
 }
 
 
-/* =========================================================
-   ANIMAÇÃO
-   ========================================================= */
-
 @keyframes abrirFiltros {
 
     from {
-
-        /* Começa menor */
         opacity: 0;
-
-        /* Começa um pouco acima */
         transform: translateY(-8px);
     }
 
     to {
 
-        /* Fica totalmente visível */
         opacity: 1;
-
-        /* Volta para a posição */
         transform: translateY(0);
     }
 }
 
 
-/* =========================================================
-   FILTRO INDIVIDUAL
-   ========================================================= */
 
 .filtro {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 7px;
 }
 
@@ -169,13 +85,9 @@
 /* LABEL */
 
 .filtro label {
-
     font-size: 10px;
-
     font-weight: 600;
-
     color: var(--cor-texto-claro);
-
     font-family: var(--fonte-principal);
 }
 
@@ -184,67 +96,42 @@
 
 .filtro input,
 .filtro select {
-
     width: 170px;
-
     height: 20px;
-
     padding: 0 12px;
-
     box-sizing: border-box;
-
     border: 1px solid transparent;
-
     border-radius: 9px;
-
     background-color: var(--cor-elementos);
-
     color: var(--cor-texto-escuro);
-
     font-size: 15px;
-
     font-family: var(--fonte-principal);
-
     outline: none;
 }
 
 
-/* =========================================================
-   BOTÕES
-   ========================================================= */
+/* BOTÕES */
 
 .btn {
-
     display: flex;
-
     gap: 10px;
 }
 
 
 .btn button {
-
     height: 30px;
-
     padding: 0 18px;
-
     border: none;
-
     border-radius: 9px;
-
-    background-color: var(--cor-botao);
-
+    background-color: var(--cor-botao-hover);
     color: var(--cor-texto-claro);
-
     font-family: var(--fonte-principal);
-
     font-weight: 600;
-
     cursor: pointer;
 }
 
 
 .btn button:hover {
-
     background-color: var(--cor-botao-hover);
 }
 
@@ -252,46 +139,35 @@
 /* BOTÃO LIMPAR */
 
 .btn .btn-reset {
-
     background-color: transparent;
-
     border: 1px solid var(--cor-botao);
-
     color: var(--cor-texto-claro);
 }
 
 
-/* =========================================================
-   CELULAR
-   ========================================================= */
+/* CELULAR */
 
 @media (max-width: 768px) {
 
     .filtros {
-
         flex-direction: column;
-
         align-items: stretch;
-
         padding: 20px;
     }
 
 
     .filtro input,
     .filtro select {
-
         width: 100%;
     }
 
 
     .btn {
-
         flex-direction: column;
     }
 
 
     .btn button {
-
         width: 100%;
     }
 }

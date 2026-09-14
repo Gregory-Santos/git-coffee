@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .imgcard {
     width: 100%;
     height: 180px; 
@@ -20,6 +25,11 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+.imgcard img:hover {
+    transform: scale(1.08);
+    transition: transform 0.2s ease-in-out;
 }
 .card-info {
     display: flex;
@@ -66,12 +76,47 @@ button:hover {
     transition: ease-in-out 3ms;
 }
 
-/*span de produto adicionado ao carrinho*/
+/*popup de produto adicionado ao carrinho*/
 
-span{
-    font-size: 16px;
+.snackbar {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999; 
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-claro);
+    padding: 14px 24px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    animation: snackbarEntrada 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-.adicionado{
-    background-color: #DFF5E5;
+.snackbar span::before {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    color: var(--cor-texto-claro);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 8px;
 }
+
+@keyframes snackbarEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
